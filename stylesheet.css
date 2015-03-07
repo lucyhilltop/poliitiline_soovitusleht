@@ -1,24 +1,46 @@
+#pais {
+	height: 200px;
+	/*width: 900px;*/
+	background: url(pais.jpg);
+}
+
+#pealkiri {
+	font-size: 70px;
+	padding: 100px 0px 20px 20px;
+	color: #FFFFFF;
+}
+
+#konteiner {
+    width: 1050px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
 #lehed li {
 	float: left;
+	font-size: 25px;
+	
 }
 
 #lehed {
 	font-family: Arial;
-	font-size: 25px;
-	margin: 0;
-	padding: 0;
+	height: 30px;
+    padding: 0;
 }
 
-#lehed li a {
+#lehed a {
 	display: block;
-	padding: 10px 70px;
+	padding: 10px 5px 10px 0px;
 	text-decoration: none;
+	text-align: center;
 	color: #000000;
-	background-color:#C0C0C0;
-	border: 3px solid #111312;
+	width: 200;
+	/*background-color:#C0C0C0;
+	border: 3px solid #111312;*/
 }
 
 #lehed li a:hover {
-	color: #0652F8;
-	background-color:#B0B0B0;
+	color: #04B404;
+	/*background-color:#B0B0B0;*/
 }
+
