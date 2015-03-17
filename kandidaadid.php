@@ -67,13 +67,6 @@
 	</table>
 </div>
 <?php
-	// Connect to database server
-	mysql_connect("ejx5shwlyf.database.windows.net", "server", "Parool11") or die (mysql_error ());
-
-	// Select database
-	mysql_select_db("andmebaas") or die(mysql_error());
-
-	mysql_close();
 	?>
 
 </body>
