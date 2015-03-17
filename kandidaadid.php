@@ -37,13 +37,13 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td><a href="kandidaadid.html" class="button">nr 100 Silver Pajumäe</a></td>
+				<td><a href="kandidaadid.php" class="button">nr 100 Silver Pajumäe</a></td>
 			</tr>
 			<tr>
-				<td><a href="kandidaadid.html" class="button">nr 101 Liis Mäeots</a></td>
+				<td><a href="kandidaadid.php" class="button">nr 101 Liis Mäeots</a></td>
 			</tr>
 			<tr>
-				<td><a href="kandidaadid.html" class="button">nr 102 Karl Erki Jürgen</a></td>
+				<td><a href="kandidaadid.php" class="button">nr 102 Karl Erki Jürgen</a></td>
 			</tr>
 			<tr>
 				<td></td>
