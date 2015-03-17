@@ -68,7 +68,7 @@
 </div>
 <?php
 // Connect to database server
-	mysql_connect("ejx5shwlyf.database.windows.net", "server", "Parool11") or die (mysql_error ());
+	mysql_connect(ejx5shwlyf.database.windows.net,1433 \r\nSQL Database: andmebaas\r\nUser Name: server\r\n\r\nPHP Data Objects(PDO) Sample Code:\r\n\r\ntry {\r\n   $conn = new PDO ( \"sqlsrv:server = tcp:ejx5shwlyf.database.windows.net,1433; Database = andmebaas\", \"server\", \"{Parool11}\");\r\n    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );\r\n}\r\ncatch ( PDOException $e ) {\r\n   print( \"Error connecting to SQL Server.\" );\r\n   die(print_r($e));\r\n}\r\n\rSQL Server Extension Sample Code:\r\n\r\n$connectionInfo = array(\"UID\" => \"server@ejx5shwlyf\", \"pwd\" => \"{Parool11}\", \"Database\" => \"andmebaas\", \"LoginTimeout\" => 30, \"Encrypt\" => 1);\r\n$serverName = \"tcp:ejx5shwlyf.database.windows.net,1433\";\r\n$conn = sqlsrv_connect($serverName, $connectionInfo);) or die (mysql_error ());
 
 	// Select database
 	mysql_select_db("andmebaas") or die(mysql_error());
