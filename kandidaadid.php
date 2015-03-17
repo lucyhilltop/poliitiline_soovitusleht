@@ -7,7 +7,34 @@
 <link rel="stylesheet" type="text/css" href="stylesheet.css">
 <style type="text/css"></style>
 </head>
-<body>
+<body
+
+<?php
+	// Connect to database server
+	mysql_connect("ejx5shwlyf.database.windows.net", "server", "Parool11") or die (mysql_error ());
+
+	// Select database
+	mysql_select_db("andmebaas") or die(mysql_error());
+
+	// SQL query
+	$strSQL = "SELECT * FROM Kandidaadid";
+
+	// Execute the query (the recordset $rs contains the result)
+	$rs = mysql_query($strSQL);
+	
+	// Loop the recordset $rs
+	while($row = mysql_fetch_array($rs)) {
+	  
+	  
+	  echo $row['nimi'];
+	  echo $row['number'];
+
+
+	  }
+
+	// Close the database connection
+	mysql_close();
+	?>
 
 
 
