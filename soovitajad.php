@@ -39,14 +39,12 @@
 	// Execute the query (the recordset $rs contains the result)
 	$rs = mysql_query($strSQL);
 	
-	
 	// Loop the recordset $rs
 	while($row = mysql_fetch_array($rs)) {
 
 	  
 	  
 	  
-	  echo $row['number'];
 
 
 	  }
