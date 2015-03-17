@@ -11,28 +11,25 @@
 
 <?php
 	// Connect to database server
-	mysql_connect("mysql.myhost.com", "user", "sesame") or die (mysql_error ());
+	mysql_connect("ejx5shwlyf.database.windows.net", "server", "Parool11") or die (mysql_error ());
 
 	// Select database
-	mysql_select_db("mydatabase") or die(mysql_error());
+	mysql_select_db("andmebaas") or die(mysql_error());
 
 	// SQL query
-	$strSQL = "SELECT * FROM people ORDER BY FirstName DESC";
+	$strSQL = "SELECT * FROM Kandidaadid";
 
 	// Execute the query (the recordset $rs contains the result)
 	$rs = mysql_query($strSQL);
 	
 	// Loop the recordset $rs
 	while($row = mysql_fetch_array($rs)) {
+;
+	  
+	  
+	  echo $row['nimi'];
+	  echo $row['number'];
 
-	   // Name of the person
-	  $strName = $row['FirstName'] . " " . $row['LastName'];
-
-	   // Create a link to person.php with the id-value in the URL
-	   $strLink = "<a href = 'person.php?id = " . $row['id'] . "'>" . $strNavn . "</a>";
-
-	    // List link
-	   echo "<li>" . $strLink . "</li>";
 
 	  }
 
