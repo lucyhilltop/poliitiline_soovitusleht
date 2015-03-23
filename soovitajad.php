@@ -27,6 +27,24 @@
 	</form>
 	
 	<?php
+	# Connect
+	mysql_connect('ejx5shwlyf.database.windows.net', 'server', 'Parool11') or die('Could not connect: ' . mysql_error());
+	 
+	# Choose a database
+	mysql_select_db('andmebaas') or die('Could not select database');
+	 
+	# Perform database query
+	$query = "SELECT * from Soovitajad";
+	$result = mysql_query($query) or die('Query failed: ' . mysql_error());
+	 
+	# Filter through rows and echo desired information
+	while ($row = mysql_fetch_object($result)) {
+		echo $row->name;
+	}
+	?>
+	 
+	<?php
+	/*
 	// Connect to database server
 	mysql_connect("ejx5shwlyf.database.windows.net", "server", "Parool11") or die (mysql_error ());
 
@@ -42,15 +60,11 @@
 	// Loop the recordset $rs
 	while($row = mysql_fetch_array($rs)) {
 
-	  
-	  
-	  
-
-
 	  }
 
 	// Close the database connection
 	mysql_close();
+	*/
 	?>
 	
 	
