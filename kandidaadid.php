@@ -53,7 +53,8 @@
 	$retval = mysql_query( $sql, $conn );
 	echo "<h2>a</h2>";
 	
-	$sql = "SELECT * FROM Kasutajad";
+	try {
+	$sql = "SELECT * FROM Kandidaadid";
 					$result = $conn->query($sql);
 
 					if ($result->num_rows > 0) {
@@ -64,7 +65,10 @@
 					} else {
 						echo "0 results";
 					}
-	
+	}
+	catch(Exception $e) {
+       	echo "<h2>$e</h2>";
+    }
 	
 	
 	if(! $retval )
