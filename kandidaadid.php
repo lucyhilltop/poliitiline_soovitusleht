@@ -38,17 +38,20 @@
 					$username = "server";
 					$password = "Parool11";
 					$dbname = "andmebaas2";
-
+					echo "A";
 					// Create connection
 					$conn = new mysqli($servername, $username, $password, $dbname);
+					echo "A";
 					// Check connection
 					if ($conn->connect_error) {
 						die("Connection failed!!!! : ( - " . $conn->connect_error);
 					} 
-
+					
+					echo "A";
 					$sql = "SELECT * FROM Kasutajad";
 					$result = $conn->query($sql);
-
+					
+					echo "A";
 					if ($result->num_rows > 0) {
 						// output data of each row
 						while($row = $result->fetch_assoc()) {
