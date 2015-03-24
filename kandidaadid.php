@@ -55,9 +55,9 @@
 	
 	
 	$sql = "SELECT * FROM Kandidaadid";
-	echo "<h2>a</h2>";
-	$result = $conn- query($sql) or die(mysqli_error());
-	echo "<h2>a</h2>";
+	echo "<h2>b</h2>";
+	$result = mysqli_query($conn, $sql);
+	echo "<h2>c</h2>";
 	
 	if ($result->num_rows > 0) {
 						// output data of each row
