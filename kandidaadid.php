@@ -33,42 +33,7 @@
 			</tr>
 		</thead>
 		
-	<?php
-	echo "<h2>Alustan</h2>";
-	$server = "tcp:ejx5shwlyf.database.windows.net,1433";
-    $user = "server@ejx5shwlyf";
-    $pwd = "Parool11";
-    $db = "andmebaas";
-    echo "<h2>Alustan Connectimist</h2>";
-    $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
-
-    if($conn == false){
-    	echo "<h2>Error</h2>";
-        die(print_r(sqlsrv_errors()));
-    }
-   
-    echo "<h2>Lõpetan</h2>";
 	
-	$sql = "SELECT nimi FROM Kandidaadid";	
-	mysql_select_db("andmebaas");
-	$retval = mysql_query( $sql, $conn );
-	echo "<h2>a</h2>";
-	
-	if(! $retval )
-	{
-	  die('EI SAANUD ANDMEID!!!!: ' . mysql_error());
-	}
-	while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-	{
-		echo "EMP ID :{$row['emp_id']}  <br> ".
-			 "EMP NAME : {$row['emp_name']} <br> ".
-			 "EMP SALARY : {$row['emp_salary']} <br> ".
-			 "--------------------------------<br>";
-	} 
-	echo "Fetched data successfully\n";
-	mysql_close($conn);
-			
-	?>
 	
 	<?php
 	echo "<h2>Alustan</h2>";
