@@ -51,13 +51,13 @@
 	mysql_select_db("andmebaas");
 	$retval = mysql_query( $sql, $conn );
 	*/
-	$sql = "SELECT * FROM Soovitajad";
+	$sql = "SELECT * FROM Kandidaadid";
 	$result = mysqli_query($conn, $sql);
 	
 	$row_cnt = $result->num_rows;
 	printf("Result set has %d rows.\n", $row_cnt);
 	
-	if (mysqli_num_rows($result) > 0) {
+	if (mysql_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
         echo " - Name: " . $row["nimi"]."<br>";
