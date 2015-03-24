@@ -30,13 +30,13 @@
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
     //using the values you retrieved earlier from the portal.
-    $host = "ejx5shwlyf.database.windows.net";
+    $host = "tcp:ejx5shwlyf.database.windows.net,1433";
     $user = "server";
     $pwd = "Parool11";
     $db = "andmebaas";
     // Connect to database.
     try {
-        $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
+        $conn = new PDO( ""sqlsrv:server=$host;dbname=$db", $user, $pwd);
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     }
     catch(Exception $e){
