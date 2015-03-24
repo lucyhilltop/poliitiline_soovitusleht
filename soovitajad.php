@@ -35,6 +35,7 @@
     echo "<h2>Alustan Connectimist</h2>";
     $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
 	echo "<h2>PEALE CONNECTIMIST</h2>";
+	echo "<h2>$conn</h2>";
     if($conn == false){
     	echo "<h2>Error</h2>";
         die(print_r(sqlsrv_errors()));
