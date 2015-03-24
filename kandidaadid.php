@@ -41,12 +41,7 @@
     $db = "andmebaas";
     echo "<h2>Alustan Connectimist</h2>";
     $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
-	
-	if(! $conn )
-	{
-	  die('Could not connect: ' . mysql_error());
-	}
-	
+
     if($conn == false){
     	echo "<h2>Error</h2>";
         die(print_r(sqlsrv_errors()));
@@ -58,7 +53,10 @@
 	$retval = mysql_query( $sql, $conn );
 	echo "<h2>a</h2>";
 	
-	
+	if(! $sql )
+	{
+	  die('EI SAANUD SQLi!!!!: ' . mysql_error());
+	}
 	
 	if(! $retval )
 	{
