@@ -53,13 +53,12 @@
 	$retval = mysql_query( $sql, $conn );
 	echo "<h2>a</h2>";
 	
-	$sql = "SELECT * FROM Kandidaadid";
-	$result = $conn->query($sql);
 	
-	if($result )
-	{
-	  die('_????: ' . mysql_error());
-	}	
+	$sql = "SELECT * FROM Kandidaadid";
+	echo "<h2>a</h2>";
+	$result = $conn->query($sql);
+	echo "<h2>a</h2>";
+	
 	if ($result->num_rows > 0) {
 						// output data of each row
 		while($row = $result->fetch_assoc()) {
