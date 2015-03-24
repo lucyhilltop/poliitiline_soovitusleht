@@ -58,24 +58,12 @@
 	if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "id: " . $row["id"]. " - nimi: " . $row["nimi"]"<br>";
+        echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
     }
 	} else {
 		echo "0 results";
 	}
 	
-	
-	if(! $retval )
-	{
-	  die('EI SAANUD ANDMEID!!!!: ' . mysql_error());
-	}	
-	while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-	{
-		echo "Id:{$row['Id']}  <br> ".
-			 "Nimi: {$row['nimi']} <br> ".
-			 "--------------------------------<br>";
-	} 
-	echo "Fetched data successfully\n";
 	mysql_close($conn);
 			
 	?>
