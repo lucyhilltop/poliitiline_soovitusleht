@@ -27,26 +27,6 @@
 	</form>
 	
 	<?php
-	# Connect
-	mysql_connect('ejx5shwlyf.database.windows.net', 'server', 'Parool11') or die(': ( ...Could not connect: ' . mysql_error());
-	 
-	 echo "b";
-	# Choose a database
-	mysql_select_db('andmebaas') or die('Could not select database');
-	 
-	 echo "c";
-	# Perform database query
-	$query = "SELECT * from Soovitajad";
-	$result = mysql_query($query) or die('Query failed: ' . mysql_error());
-	 echo "d";
-	# Filter through rows and echo desired information
-	while ($row = mysql_fetch_object($result)) {
-		echo $row->name;
-	}
-	?>
-	 
-	<?php
-	/*
 	// Connect to database server
 	try {
         	$conn = new PDO(sqlsrv:server = tcp:ejx5shwlyf.database.windows.net,1433; Database = andmebaas", "server", "Parool11");
@@ -73,7 +53,6 @@
 
 	// Close the database connection
 	mysql_close();
-	*/
 	?>
 	
 	
