@@ -50,14 +50,9 @@
     echo "<h2>Lõpetan</h2>";
 	
 	$sql = "SELECT nimi FROM Kandidaadid";	
+	mysql_select_db("andmebaas");
 	$retval = mysql_query( $sql, $conn );
 	echo "<h2>a</h2>";
-	
-	if(! $sql )
-	{
-	  die('EI SAANUD SQLi!!!!: ' . mysql_error());
-	}
-	echo "tadasd";
 	
 	if(! $retval )
 	{
