@@ -56,7 +56,7 @@
 	$sql = "SELECT * FROM Kandidaadid";
 	$result = $conn->query($sql);
 	
-	if(! $result )
+	if($result )
 	{
 	  die('_????: ' . mysql_error());
 	}	
