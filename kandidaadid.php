@@ -47,18 +47,17 @@
     }
    
     echo "<h2>Lõpetan</h2>";
-	
-	$sql = "SELECT nimi FROM Kandidaadid";	
+	/*
 	mysql_select_db("andmebaas");
 	$retval = mysql_query( $sql, $conn );
-	
+	*/
 	$sql = "SELECT * FROM Kandidaadid";
 	$result = mysqli_query($conn, $sql);
 	
 	if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
+        echo " - Name: " . $row["nimi"]."<br>";
     }
 	} else {
 		echo "0 results";
