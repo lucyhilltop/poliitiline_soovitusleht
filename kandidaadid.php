@@ -51,23 +51,18 @@
 	$sql = "SELECT nimi FROM Kandidaadid";	
 	mysql_select_db("andmebaas");
 	$retval = mysql_query( $sql, $conn );
-	echo "<h2>a</h2>";
-	
 	
 	$sql = "SELECT * FROM Kandidaadid";
-	echo "<h2>b</h2>";
 	$result = mysqli_query($conn, $sql);
-	echo "<h2>c</h2>";
 	
-	if ($result->num_rows > 0) {
-						// output data of each row
-		while($row = $result->fetch_assoc()) {
-			echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
-		}
+	if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "id: " . $row["id"]. " - nimi: " . $row["nimi"]"<br>";
+    }
 	} else {
 		echo "0 results";
-		}
-
+	}
 	
 	
 	if(! $retval )
