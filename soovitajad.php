@@ -48,7 +48,14 @@
 	<?php
 	/*
 	// Connect to database server
-	mysql_connect("ejx5shwlyf.database.windows.net", "server", "Parool11") or die (mysql_error ());
+	try {
+        	$conn = new PDO(sqlsrv:server = tcp:ejx5shwlyf.database.windows.net,1433; Database = andmebaas", "server", "Parool11");
+        	$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    	}
+	catch(Exception $e){
+		print("Error connecting to SQL Server.");
+        	die(print_r($e));
+	}
 
 	// Select database
 	mysql_select_db("andmebaas") or die(mysql_error());
