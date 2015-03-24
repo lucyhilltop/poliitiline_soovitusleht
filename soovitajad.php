@@ -46,7 +46,7 @@
 	echo "<h2>sql valitud</h2>";
 	try {
 		echo "Olen try sees";
-		$resultSet = $conn->query("SELECT * FROM v_kandidaadid");
+		$resultSet = $conn->query("SELECT * FROM Kandidaadid");
 		echo "Väljun try'st";
 	}
 	catch(Exception $e) {
