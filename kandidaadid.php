@@ -32,6 +32,36 @@
 				<th>Kandidaadid</th>
 			</tr>
 		</thead>
+		
+		<?php
+					$servername = "ejx5shwlyf.database.windows.net";
+					$username = "server";
+					$password = "Parool11";
+					$dbname = "andmebaas2";
+
+					// Create connection
+					$conn = new mysqli($servername, $username, $password, $dbname);
+					// Check connection
+					if ($conn->connect_error) {
+						die("Connection failed!!!! : ( - " . $conn->connect_error);
+					} 
+
+					$sql = "SELECT * FROM Kasutajad";
+					$result = $conn->query($sql);
+
+					if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+							echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
+						}
+					} else {
+						echo "0 results";
+					}
+					$conn->close();
+					?>
+		
+		
+		
 		<tbody>
 			<tr>
 				<td><a href="kandidaadid.php" class="button">nr 100 Silver Pajumäe</a></td>
@@ -66,18 +96,6 @@
 		</tbody>
 	</table>
 </div>
-<?php
-// Connect to database server
-	\r\n\r\ntry {\r\n   $conn = new PDO ( \"sqlsrv:server = tcp:ejx5shwlyf.database.windows.net,1433;
-	Database = andmebaas\", \"server\", \"Parool11\");
-	\r\n    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-	\r\n}\r\ncatch ( PDOException $e ) {\r\n   print( \"Error connecting to SQL Server.\" );
-	\r\n   die(print_r($e));
-	\r\n}
-	\r\n\r\n$connectionInfo = array(\"UID\" => \"server@ejx5shwlyf\", \"pwd\" => \"Parool11\", \"Database\" => \"andmebaas\", \"LoginTimeout\" => 30, \"Encrypt\" => 1);
-	\r\n$serverName = \"tcp:ejx5shwlyf.database.windows.net,1433\";
-	\r\n$conn = sqlsrv_connect($serverName, $connectionInfo);
-	?>
 
 </body>
 </html>
