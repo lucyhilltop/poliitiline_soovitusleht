@@ -53,9 +53,9 @@
        	echo "<h2>$e</h2>";
     }
 	echo "<h2>result valitud</h2>";
-	if ($result->num_rows > 0) {
+	if ($resultSet->num_rows > 0) {
 	// output data of each row
-		while($row = $result->fetch_assoc()) {
+		while($row = $resultSet->fetch_assoc()) {
 			echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
 				}
 		} else {
