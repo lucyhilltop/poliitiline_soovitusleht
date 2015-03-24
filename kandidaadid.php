@@ -33,36 +33,39 @@
 			</tr>
 		</thead>
 		
-		<?php
-					$servername = "tcp:ejx5shwlyf.database.windows.net,1433";
-					$username = "server@ejx5shwlyf";
-					$password = "Parool11";
-					$dbname = "andmebaas2";
-					echo "A";
-					// Create connection
-					$conn = new mysqli($servername, $username, $password, $dbname);
-					echo "A";
-					// Check connection
-					if ($conn->connect_error) {
-						die("Connection failed!!!! : ( - " . $conn->connect_error);
-					} 
-					
-					echo "A";
-					$sql = "SELECT * FROM Kasutajad";
-					$result = $conn->query($sql);
-					
-					echo "A";
-					if ($result->num_rows > 0) {
-						// output data of each row
-						while($row = $result->fetch_assoc()) {
-							echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
-						}
-					} else {
-						echo "0 results";
-					}
-					$conn->close();
-					?>
+	<?php
+	echo "<h2>Alustan</h2>";
+	$server = "tcp:ejx5shwlyf.database.windows.net,1433";
+    $user = "server@ejx5shwlyf";
+    $pwd = "Parool11";
+    $db = "andmebaas";
+    echo "<h2>Alustan Connectimist</h2>";
+    $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
+
+    if($conn == false){
+    	echo "<h2>Error</h2>";
+        die(print_r(sqlsrv_errors()));
+    }
+   
+    echo "<h2>Lõpetan</h2>";
+	
+	$sql = "SELECT * FROM Kandidaadid";
+	echo "<h2>sql valitud</h2>";
+	
+	$resultSet = $conn->query("SELECT * FROM Kandidaadid");
+	echo "<h2>result valitud</h2>";
+	
+	if ($result->num_rows > 0) {
+	// output data of each row
+		while($row = $result->fetch_assoc()) {
+			echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
+				}
+		} else {
+			echo "<h2>0 tulemust</h2>";
+		}
 		
+	?>
+	
 		
 		
 		<tbody>
