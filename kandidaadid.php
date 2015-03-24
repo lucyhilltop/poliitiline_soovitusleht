@@ -53,23 +53,22 @@
 	$retval = mysql_query( $sql, $conn );
 	echo "<h2>a</h2>";
 	
-	try {
-	echo "<h2>a</h2>";
 	$sql = "SELECT * FROM Kandidaadid";
-					$result = $conn->query($sql);
-
-					if ($result->num_rows > 0) {
+	$result = $conn->query($sql);
+	
+	if(! $result )
+	{
+	  die('_????: ' . mysql_error());
+	}	
+	if ($result->num_rows > 0) {
 						// output data of each row
-						while($row = $result->fetch_assoc()) {
-							echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
-						}
-					} else {
-						echo "0 results";
-					}
-	}
-	catch(Exception $e) {
-       	echo "<h2>$e</h2>";
-    }
+		while($row = $result->fetch_assoc()) {
+			echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
+		}
+	} else {
+		echo "0 results";
+		}
+
 	
 	
 	if(! $retval )
