@@ -51,7 +51,7 @@
 	mysql_select_db("andmebaas");
 	$retval = mysql_query( $sql, $conn );
 	*/
-	$sql = "SELECT * FROM Kandidaadid";
+	$sql = "SELECT * FROM Soovitajad";
 	$result = mysqli_query($conn, $sql);
 	
 	if (mysqli_num_rows($result) > 0) {
