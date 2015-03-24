@@ -25,7 +25,9 @@
             <input id="searchbox" type="text" placeholder="Search..." required>
             <input id="searchbutton" type="submit" value="">
 	</form>
-	
+	<?php
+	echo "????????????"
+	?>
 	<table id="soovitajad">
 		<thead>
 			<tr>
@@ -60,8 +62,8 @@
 	}
 	while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 	{
-		echo "EMP ID :{$row['Id']}  <br> ".
-			 "EMP NAME : {$row['nimi']} <br> ".
+		echo "Id:{$row['Id']}  <br> ".
+			 "Nimi: {$row['nimi']} <br> ".
 			 "--------------------------------<br>";
 	} 
 	echo "Fetched data successfully\n";
