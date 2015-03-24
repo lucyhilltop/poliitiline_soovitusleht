@@ -34,6 +34,7 @@
     	}
 	catch(Exception $e){
 		print("Error connecting to SQL Server.");
+		print("VIGA");
         	die(print_r($e));
 	}
 
