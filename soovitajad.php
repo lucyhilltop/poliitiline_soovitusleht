@@ -30,7 +30,7 @@
     // DB connection info
     //TODO: Update the values for $host, $user, $pwd, and $db
     //using the values you retrieved earlier from the portal.
-    $host = "ejx5shwlyf.database.windows.net,1433";
+    $host = "ejx5shwlyf.database.windows.net";
     $user = "server";
     $pwd = "Parool11";
     $db = "andmebaas";
