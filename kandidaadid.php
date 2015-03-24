@@ -70,6 +70,34 @@
 			
 	?>
 	
+	<?php
+	echo "<h2>Alustan</h2>";
+	$server = "tcp:ejx5shwlyf.database.windows.net,1433";
+    $user = "server@ejx5shwlyf";
+    $pwd = "Parool11";
+    $db = "andmebaas";
+    echo "<h2>Alustan Connectimist</h2>";
+    $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
+
+    if($conn == false){
+    	echo "<h2>Error</h2>";
+        die(print_r(sqlsrv_errors()));
+    }
+   
+    echo "<h2>Lõpetan</h2>";
+	
+	$data = mysql_query("SELECT * FROM Kandidaadid")  or die(mysql_error()); 
+	echo"<table border cellpadding=3>"; 
+	while($row= mysql_fetch_array( $data )) 
+	 { 
+		echo"<tr>"; 
+		echo"<th>nimi:</th> <td>".$row['nimi'] . "</td> "; 
+		echo"<th>number:</th> <td>".$row['number'] . " </td></tr>"; 
+		echo"<th>kirjeldus:</th> <td>".$row['kirjeldus'] . "</td> "; 
+		echo"<th>Price:</th> <td>".$row['Price'] . " </td></tr>"; 
+	 } 
+	 echo"</table>"; 
+	 ?> 
 		
 		
 		<tbody>
