@@ -43,16 +43,18 @@
 	
     echo "<h2>Lõpetan</h2>";
 	$sql = "SELECT * FROM Soovitajad";
+	echo "<h2>sql valitud</h2>";
 	$result = $conn->query($sql);
-	echo "A";
+	echo "<h2>result valitud</h2>";
 	if ($result->num_rows > 0) {
 	// output data of each row
 		while($row = $result->fetch_assoc()) {
 			echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
 				}
 		} else {
-			echo "0 results";
+			echo "<h2>0 tulemust</h2>";
 		}
+		
 	?>
 	
 	
