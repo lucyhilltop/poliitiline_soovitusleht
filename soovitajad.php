@@ -44,7 +44,12 @@
     echo "<h2>Lõpetan</h2>";
 	$sql = "SELECT * FROM Soovitajad";
 	echo "<h2>sql valitud</h2>";
-	$resultSet = $conn->query("SELECT * FROM v_kandidaadid");
+	try {
+		$resultSet = $conn->query("SELECT * FROM v_kandidaadid");
+	}
+	catch(Exception $e) {
+       	echo "<h2>$e</h2>";
+    }
 	echo "<h2>result valitud</h2>";
 	if ($result->num_rows > 0) {
 	// output data of each row
