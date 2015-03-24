@@ -27,34 +27,24 @@
 	</form>
 	
 	<?php
-	// Connect to database server
-	try {
-        	$conn = new PDO(sqlsrv:server = tcp:ejx5shwlyf.database.windows.net,1433; Database = andmebaas", "server", "Parool11");
-        	$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    	}
-	catch(Exception $e){
-		print("Error connecting to SQL Server.");
-		print("VIGA");
-        	die(print_r($e));
-	}
-
-	// Select database
-	mysql_select_db("andmebaas") or die(mysql_error());
-
-	// SQL query
-	$strSQL = "SELECT * FROM Kandidaadid";
-
-	// Execute the query (the recordset $rs contains the result)
-	$rs = mysql_query($strSQL);
-	
-	// Loop the recordset $rs
-	while($row = mysql_fetch_array($rs)) {
-
-	  }
-
-	// Close the database connection
-	mysql_close();
-	?>
+    // DB connection info
+    //TODO: Update the values for $host, $user, $pwd, and $db
+    //using the values you retrieved earlier from the portal.
+    $host = "ejx5shwlyf.database.windows.net,1433";
+    $user = "server";
+    $pwd = "Parool11";
+    $db = "andmebaas";
+    // Connect to database.
+    try {
+        $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
+        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    }
+    catch(Exception $e){
+        die(var_dump($e));
+    }
+    // Insert registration info
+    echo "<h3>Your're registered!</h3>";
+?>
 	
 	
 	<table id="soovitajad">
