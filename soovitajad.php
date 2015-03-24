@@ -37,7 +37,7 @@
     if($conn === false){
         die(print_r(sqlsrv_errors()));
         
-    echo 'JALH';
+    echo "<h2>People who are registered:</h2>";
 }
 ?>
 	
