@@ -44,7 +44,7 @@
     echo "<h2>Lõpetan</h2>";
 	$sql = "SELECT * FROM Soovitajad";
 	echo "<h2>sql valitud</h2>";
-	$resultSet = $conn->query("SELECT * FROM Soovitajad");
+	$resultSet = $conn->query("SELECT * FROM v_kandidaadid");
 	echo "<h2>result valitud</h2>";
 	if ($result->num_rows > 0) {
 	// output data of each row
