@@ -50,10 +50,8 @@
     echo "<h2>Lõpetan</h2>";
 	
 	$sql = "SELECT * FROM Kandidaadid";
-	echo "<h2>sql valitud</h2>";
-	
 	$result = $conn->query($sql);
-	echo "<h2>result valitud</h2>";
+	echo "<h2>result</h2>";
 	
 	if ($result->num_rows > 0) {
 	// output data of each row
