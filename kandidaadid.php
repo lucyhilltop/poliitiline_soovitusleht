@@ -49,19 +49,26 @@
    
     echo "<h2>Lõpetan</h2>";
 	
-	$sql = "SELECT Id, nimi FROM Kandidaadid";
-	$result = $conn->query($sql);
-	echo "<h2>result</h2>";
+	$sql = "SELECT Id, nimi FROM Kandidaadid";	
+	$retval = mysql_query( $sql, $conn );
+	echo "<h2>a</h2>";
 	
-	if ($result->num_rows > 0) {
-	// output data of each row
-		while($row = $result->fetch_assoc()) {
-			echo "id: " . $row["Id"]. " - Name: " . $row["nimi"]."<br>";
-				}
-		} else {
-			echo "<h2>0 tulemust</h2>";
-		}
-		
+	
+	
+	if(! $retval )
+	{
+	  die('Could not get data: ' . mysql_error());
+	}
+	while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+	{
+		echo "EMP ID :{$row['emp_id']}  <br> ".
+			 "EMP NAME : {$row['emp_name']} <br> ".
+			 "EMP SALARY : {$row['emp_salary']} <br> ".
+			 "--------------------------------<br>";
+	} 
+	echo "Fetched data successfully\n";
+	mysql_close($conn);
+			
 	?>
 	
 		
