@@ -54,6 +54,7 @@
 	echo "<h2>a</h2>";
 	
 	try {
+	echo "<h2>a</h2>";
 	$sql = "SELECT * FROM Kandidaadid";
 					$result = $conn->query($sql);
 
