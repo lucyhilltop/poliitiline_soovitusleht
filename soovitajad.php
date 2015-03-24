@@ -28,7 +28,7 @@
 	
 	<?php
 	# Connect
-	mysql_connect('ejx5shwlyf.database.windows.net', 'server111', 'Parool11') or die(': ( ...Could not connect: ' . mysql_error());
+	mysql_connect('ejx5shwlyf.database.windows.net', 'server', 'Parool11') or die(': ( ...Could not connect: ' . mysql_error());
 	 
 	 echo "b";
 	# Choose a database
