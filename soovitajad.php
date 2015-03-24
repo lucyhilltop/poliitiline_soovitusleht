@@ -45,7 +45,9 @@
 	$sql = "SELECT * FROM Soovitajad";
 	echo "<h2>sql valitud</h2>";
 	try {
+		echo "Olen try sees";
 		$resultSet = $conn->query("SELECT * FROM v_kandidaadid");
+		echo "Väljun try'st";
 	}
 	catch(Exception $e) {
        	echo "<h2>$e</h2>";
