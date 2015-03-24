@@ -57,6 +57,7 @@
 	{
 	  die('EI SAANUD SQLi!!!!: ' . mysql_error());
 	}
+	echo "tadasd";
 	
 	if(! $retval )
 	{
