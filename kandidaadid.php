@@ -54,9 +54,7 @@
 	$sql = "SELECT * FROM Kandidaadid";
 	$result = mysqli_query($conn, $sql);
 	
-	$row_cnt = $result->num_rows;
-	printf("Result set has %d rows.\n", $row_cnt);
-	
+
 	if (mysql_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
