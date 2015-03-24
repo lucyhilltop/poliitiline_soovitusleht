@@ -39,21 +39,21 @@
     	echo "<h2>Error</h2>";
         die(print_r(sqlsrv_errors()));
     
-	$sql = "SELECT * FROM Soovitajad";
-					$result = $conn->query($sql);
-					
-					echo "A";
-					if ($result->num_rows > 0) {
-						// output data of each row
-						while($row = $result->fetch_assoc()) {
-							echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
-						}
-					} else {
-						echo "0 results";
-					}
+	
     echo "<h2>Lõpetan</h2>";
 }
-?>
+	$sql = "SELECT * FROM Soovitajad";
+	$result = $conn->query($sql);
+	echo "A";
+	if ($result->num_rows > 0) {
+	// output data of each row
+		while($row = $result->fetch_assoc()) {
+			echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
+				}
+		} else {
+			echo "0 results";
+		}
+	?>
 	
 	
 	<table id="soovitajad">
