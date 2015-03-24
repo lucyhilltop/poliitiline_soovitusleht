@@ -54,8 +54,8 @@
 	$sql = "SELECT * FROM Soovitajad";
 	$result = mysqli_query($conn, $sql);
 	
-	int $mysqli_result->num_rows;
-	echo $mysqli_result;
+	$row_cnt = $result->num_rows;
+	printf("Result set has %d rows.\n", $row_cnt);
 	
 	if (mysqli_num_rows($result) > 0) {
     // output data of each row
