@@ -27,6 +27,7 @@
 	</form>
 	
 	<?php
+	echo "<h2>Alustan</h2>";
 	$server = "tcp:ejx5shwlyf.database.windows.net,1433";
     $user = "server@ejx5shwlyf";
     $pwd = "Parool11";
@@ -37,7 +38,7 @@
     if($conn === false){
         die(print_r(sqlsrv_errors()));
         
-    echo "<h2>People who are registered:</h2>";
+    echo "<h2>Lõpetan</h2>";
 }
 ?>
 	
