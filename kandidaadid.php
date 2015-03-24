@@ -55,7 +55,7 @@
 	$result = mysqli_query($conn, $sql);
 	
 	int $mysqli_result->num_rows;
-	echo "Ridu:" $mysqli_result;
+	echo $mysqli_result;
 	
 	if (mysqli_num_rows($result) > 0) {
     // output data of each row
