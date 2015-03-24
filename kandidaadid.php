@@ -52,7 +52,7 @@
 	$sql = "SELECT * FROM Kandidaadid";
 	echo "<h2>sql valitud</h2>";
 	
-	$resultSet = $conn->query("SELECT * FROM Kandidaadid");
+	$result = $conn->query($sql);
 	echo "<h2>result valitud</h2>";
 	
 	if ($result->num_rows > 0) {
