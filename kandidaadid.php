@@ -25,9 +25,6 @@
             <input id="searchbox" type="text" placeholder="Search..." required>
             <input id="searchbutton" type="submit" value="">
 	</form>
-	<?php
-	echo "????????????"
-	?>
 	<table id="soovitajad">
 		<thead>
 			<tr>
@@ -56,10 +53,24 @@
 	$retval = mysql_query( $sql, $conn );
 	echo "<h2>a</h2>";
 	
+	$sql = "SELECT * FROM Kasutajad";
+					$result = $conn->query($sql);
+
+					if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+							echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
+						}
+					} else {
+						echo "0 results";
+					}
+	
+	
+	
 	if(! $retval )
 	{
 	  die('EI SAANUD ANDMEID!!!!: ' . mysql_error());
-	}
+	}	
 	while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 	{
 		echo "Id:{$row['Id']}  <br> ".
