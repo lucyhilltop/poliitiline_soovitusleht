@@ -41,7 +41,12 @@
     $db = "andmebaas";
     echo "<h2>Alustan Connectimist</h2>";
     $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
-
+	
+	if(! $conn )
+	{
+	  die('Could not connect: ' . mysql_error());
+	}
+	
     if($conn == false){
     	echo "<h2>Error</h2>";
         die(print_r(sqlsrv_errors()));
@@ -49,7 +54,7 @@
    
     echo "<h2>Lõpetan</h2>";
 	
-	$sql = "SELECT Id, nimi FROM Kandidaadid";	
+	$sql = "SELECT nimi FROM Kandidaadid";	
 	$retval = mysql_query( $sql, $conn );
 	echo "<h2>a</h2>";
 	
@@ -57,7 +62,7 @@
 	
 	if(! $retval )
 	{
-	  die('Could not get data: ' . mysql_error());
+	  die('EI SAANUD ANDMEID!!!!: ' . mysql_error());
 	}
 	while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
 	{
