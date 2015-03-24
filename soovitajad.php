@@ -38,10 +38,10 @@
     if($conn == false){
     	echo "<h2>Error</h2>";
         die(print_r(sqlsrv_errors()));
+    }
     
 	
     echo "<h2>Lõpetan</h2>";
-}
 	$sql = "SELECT * FROM Soovitajad";
 	$result = $conn->query($sql);
 	echo "A";
