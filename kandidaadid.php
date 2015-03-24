@@ -33,8 +33,6 @@
 			</tr>
 		</thead>
 		
-	
-	
 	<?php
 	echo "<h2>Alustan</h2>";
 	$server = "tcp:ejx5shwlyf.database.windows.net,1433";
@@ -51,19 +49,26 @@
    
     echo "<h2>Lõpetan</h2>";
 	
-	$data = mysql_query("SELECT * FROM Kandidaadid")  or die(mysql_error()); 
-	echo"<table border cellpadding=3>"; 
-	while($row= mysql_fetch_array( $data )) 
-	 { 
-		echo"<tr>"; 
-		echo"<th>nimi:</th> <td>".$row['nimi'] . "</td> "; 
-		echo"<th>number:</th> <td>".$row['number'] . " </td></tr>"; 
-		echo"<th>kirjeldus:</th> <td>".$row['kirjeldus'] . "</td> "; 
-		echo"<th>Price:</th> <td>".$row['Price'] . " </td></tr>"; 
-	 } 
-	 echo"</table>"; 
-	 ?> 
-		
+	$sql = "SELECT nimi FROM Kandidaadid";	
+	mysql_select_db("andmebaas");
+	$retval = mysql_query( $sql, $conn );
+	echo "<h2>a</h2>";
+	
+	if(! $retval )
+	{
+	  die('EI SAANUD ANDMEID!!!!: ' . mysql_error());
+	}
+	while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
+	{
+		echo "EMP ID :{$row['Id']}  <br> ".
+			 "EMP NAME : {$row['nimi']} <br> ".
+			 "--------------------------------<br>";
+	} 
+	echo "Fetched data successfully\n";
+	mysql_close($conn);
+			
+	?>
+	
 		
 		<tbody>
 			<tr>
