@@ -27,23 +27,16 @@
 	</form>
 	
 	<?php
-    // DB connection info
-    //TODO: Update the values for $host, $user, $pwd, and $db
-    //using the values you retrieved earlier from the portal.
-    $host = "tcp:ejx5shwlyf.database.windows.net,1433";
-    $user = "server";
+	$server = "tcp:ejx5shwlyf.database.windows.net,1433";
+    $user = "server@ejx5shwlyf";
     $pwd = "Parool11";
     $db = "andmebaas";
-    // Connect to database.
-    try {
-        $conn = new PDO( ""sqlsrv:server=$host;dbname=$db", $user, $pwd);
-        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    }
-    catch(Exception $e){
-        die(var_dump($e));
-    }
-    // Insert registration info
-    echo "<h3>Your're registered!</h3>";
+
+    $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
+
+    if($conn === false){
+        die(print_r(sqlsrv_errors()));
+}
 ?>
 	
 	
