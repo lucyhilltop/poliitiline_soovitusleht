@@ -34,8 +34,8 @@
 		</thead>
 		
 		<?php
-					$servername = "ejx5shwlyf.database.windows.net";
-					$username = "server";
+					$servername = "tcp:ejx5shwlyf.database.windows.net,1433";
+					$username = "server@ejx5shwlyf";
 					$password = "Parool11";
 					$dbname = "andmebaas2";
 					echo "A";
