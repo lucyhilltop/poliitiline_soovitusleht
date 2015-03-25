@@ -41,30 +41,30 @@ include ("header.php");
 	
 	mysql_close($conn);
 	*/
+	$server = "tcp:ejx5shwlyf.database.windows.net,1433";
+    $user = "server@ejx5shwlyf";
+    $pwd = "Parool11";
+    $db = "andmebaas";
 	
-	$servername = "localhost";
-					$username = "admin";
-					$password = "parool";
-					$dbname = "andmebaas";
-
-					// Create connection
-					$conn = new mysqli($servername, $username, $password, $dbname);
-					// Check connection
-					if ($conn->connect_error) {
-						die("Connection failed!!!! : ( - " . $conn->connect_error);
-					} 
-
-					$sql = "SELECT * FROM Kasutajad";
-					$result = $conn->query($sql);
-
-					if ($result->num_rows > 0) {
+    $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
+    if($conn == false){
+    	echo "<h2>Error</h2>";
+        die(print_r(sqlsrv_errors()));
+    }
+   
+    echo "<h2>Connectimisega on korras</h2>";
+	$sql = "SELECT * FROM Kandidaadid";
+	$result = mysqli_query($conn, $sql);
+	
+	if ($result->num_rows > 0) {
 						// output data of each row
 						while($row = $result->fetch_assoc()) {
-							echo "id: " . $row["id"]. " - Name: " . $row["nimi"]."<br>";
+							echo "id: " . $row["ID"]. " - Name: " . $row["nimi"]."<br>";
 						}
 					} else {
 						echo "0 results";
 					}
+	
 					$conn->close();
 	
 	?>
