@@ -41,7 +41,7 @@ include ("header.php");
 	
 	mysql_close($conn);
 	*/		
-	link = mysql_connect("tcp:ejx5shwlyf.database.windows.net,1433", "server@ejx5shwlyf", "Parool11");
+	$link = mysql_connect("tcp:ejx5shwlyf.database.windows.net,1433", "server@ejx5shwlyf", "Parool11");
 	$db_list = mysql_list_dbs($link);
 
 	$i = 0;
