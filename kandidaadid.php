@@ -46,7 +46,7 @@ include ("header.php");
     $pwd = "Parool11";
     $db = "andmebaas";
 	
-    $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
+    $conn = mysqli_connect($server, $user, $pwd, $db)
     if($conn == false){
     	echo "<h2>Error</h2>";
         die(print_r(sqlsrv_errors()));
@@ -54,18 +54,22 @@ include ("header.php");
    
     echo "<h2>Connectimisega on korras</h2>";
 	$sql = "SELECT * FROM Kandidaadid";
-	$result = mysqli_query($conn, $sql);
+	$result = mysqli_query($conn, $sql) or die(mysqli_error()); 
+	
+	mysqli_get_server_info($conn) . "\n"; 
+	echo "<br />"; 
+	echo "Database: <b>$db</b> was selected\n
 	
 	if ($result->num_rows > 0) {
-						// output data of each row
-						while($row = $result->fetch_assoc()) {
-							echo "id: " . $row["ID"]. " - Name: " . $row["nimi"]."<br>";
-						}
-					} else {
-						echo "0 results";
-					}
+		// output data of each row
+		while($row = $result->fetch_assoc()) {
+			echo "id: " . $row["ID"]. " - Name: " . $row["nimi"]."<br>";
+		}
+	} else {
+		echo "0 results";
+	}
 	
-					$conn->close();
+	$conn->close();
 	
 	?>
 	
