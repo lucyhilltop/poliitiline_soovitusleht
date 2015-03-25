@@ -29,9 +29,8 @@ include ("header.php");
    
     echo "<h2>Lõpetan</h2>";
 	/*
-	mysql_select_db("andmebaas");
-	$retval = mysql_query( $sql, $conn );
-	*/
+
+	
 	$sql = "SELECT * FROM Kandidaadid";
 	$result = mysqli_query($conn, $sql);
 	
@@ -44,6 +43,18 @@ include ("header.php");
 	} else {
 		echo "0 results";
 	}
+	*/
+	
+	$data = mysql_query("SELECT * FROM friends")  or die(mysql_error()); 
+	Print "<table border cellpadding=3>"; 
+	while($info = mysql_fetch_array( $data ))  
+	{  
+	Print "<tr>"; 
+	Print "<th>Name:</th> <td>".$info['nimi'] . "</td> ";  
+	//Print "<th>Pet:</th> <td>".$info[''] . " </td></tr>";  }  
+	Print "</table>"; 
+	
+	
 	
 	mysql_close($conn);
 			
