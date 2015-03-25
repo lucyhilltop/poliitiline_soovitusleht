@@ -58,7 +58,7 @@ include ("header.php");
 	
 	mysqli_get_server_info($conn) . "\n"; 
 	echo "<br />"; 
-	echo "Database: <b>$db</b> was selected\n
+	echo "Database: <b>$db</b> was selected\n"
 	
 	if ($result->num_rows > 0) {
 		// output data of each row
