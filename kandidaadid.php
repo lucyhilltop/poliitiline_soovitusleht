@@ -47,6 +47,8 @@ include ("header.php");
 	$user = "server@ejx5shwlyf";
 	$pwd = "Parool11";
 	$db = "andmebaas";
+	
+	echo "A"
 	try{
 		$conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
 		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
@@ -54,7 +56,7 @@ include ("header.php");
 	catch(Exception $e){
 		die(print_r($e));
 	}
-	
+	echo "A"
 	
 	$sql = "SELECT * FROM Kandidaadid";
 	$stmt = $conn->query($sql);
