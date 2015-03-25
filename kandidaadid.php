@@ -19,7 +19,7 @@ include ("header.php");
     $user = "server@ejx5shwlyf";
     $pwd = "Parool11";
     $db = "andmebaas";
-	/*
+	
     $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
     if($conn == false){
     	echo "<h2>Error</h2>";
@@ -40,20 +40,7 @@ include ("header.php");
 	}
 	
 	mysql_close($conn);
-	*/		
-	$link = mysql_connect("tcp:ejx5shwlyf.database.windows.net,1433", "server@ejx5shwlyf", "Parool11");
-	$db_list = mysql_list_dbs($link);
-	
-	echo "AAA";
-	echo $db_list;
-	
-	$i = 0;
-	$cnt = mysql_num_rows($db_list);
-	echo $cnt;
-	while ($i < $cnt) {
-		echo mysql_db_name($db_list, $i) . "\n";
-		$i++;
-}
+
 	
 	?>
 	
