@@ -14,12 +14,10 @@ include ("header.php");
 		</thead>
 		
 	<?php
-	echo "<h2>Alustan</h2>";
 	$server = "tcp:ejx5shwlyf.database.windows.net,1433";
     $user = "server@ejx5shwlyf";
     $pwd = "Parool11";
     $db = "andmebaas";
-    echo "<h2>Alustan Connectimist</h2>";
     $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
 
     if($conn == false){
@@ -27,10 +25,9 @@ include ("header.php");
         die(print_r(sqlsrv_errors()));
     }
    
-    echo "<h2>Lõpetan</h2>";
-	/*
+    echo "<h2>Connectimisega on korras</h2>";
 
-	
+	/*
 	$sql = "SELECT * FROM Kandidaadid";
 	$result = mysqli_query($conn, $sql);
 	
@@ -43,17 +40,24 @@ include ("header.php");
 	} else {
 		echo "0 results";
 	}
-	*/
-	mysql_select_db("andmebaas") or die(mysql_error()); 
-	$data = mysql_query("SELECT * FROM Kandidaadid")  or die(mysql_error()); 
-	Print "<table border cellpadding=3>"; 
-	while($info = mysql_fetch_array( $data ))  
-	{  
-	Print "<tr>"; 
-	Print "<th>Name:</th> <td>".$info['nimi'] . "</td> ";  
-	//Print "<th>Pet:</th> <td>".$info[''] . " </td></tr>";  }  
-	Print "</table>"; 
 	
+	*/
+	
+	$sql = "SHOW TABLES FROM $db";
+	$result = mysql_query($sql);
+
+	if (!$result) {
+		echo "DB Error, could not list tables\n";
+		echo 'MySQL Error: ' . mysql_error();
+		exit;
+	}
+
+	while ($row = mysql_fetch_row($result)) {
+		echo "Table: {$row[0]}\n";
+	}
+
+	mysql_free_result($result);
+
 	
 	
 	mysql_close($conn);
