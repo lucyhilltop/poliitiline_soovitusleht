@@ -44,7 +44,7 @@ include ("header.php");
 		echo "0 results";
 	}
 	*/
-	
+	mysql_select_db("andmebaas") or die(mysql_error()); 
 	$data = mysql_query("SELECT * FROM Kandidaadid")  or die(mysql_error()); 
 	Print "<table border cellpadding=3>"; 
 	while($info = mysql_fetch_array( $data ))  
