@@ -43,7 +43,10 @@ include ("header.php");
 	*/		
 	$link = mysql_connect("tcp:ejx5shwlyf.database.windows.net,1433", "server@ejx5shwlyf", "Parool11");
 	$db_list = mysql_list_dbs($link);
-
+	
+	echo "AAA";
+	echo $db_list;
+	
 	$i = 0;
 	$cnt = mysql_num_rows($db_list);
 	while ($i < $cnt) {
