@@ -26,9 +26,25 @@ include ("header.php");
     }
    
     echo "<h2>Connectimisega on korras</h2>";
-
-	/*
-	$sql = "SELECT * FROM Kandidaadid";
+	
+	try{
+    $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
+    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $sql = "CREATE TABLE registration_tbl(
+                id INT NOT NULL AUTO_INCREMENT, 
+                PRIMARY KEY(id),
+                name VARCHAR(30),
+                email VARCHAR(30),
+                date DATE)";
+    $conn->query($sql);
+	}
+	catch(Exception $e){
+		die(print_r($e));
+	}
+	echo "<h3>Table created.</h3>";
+	
+	
+	$sql = "SELECT * FROM registration_tbl";
 	$result = mysqli_query($conn, $sql);
 	
 
@@ -41,24 +57,7 @@ include ("header.php");
 		echo "0 results";
 	}
 	
-	*/
-	
-	$sql = "SHOW TABLES FROM $db";
-	$result = mysql_query($sql);
 
-	if (!$result) {
-		echo "DB Error, could not list tables\n";
-		echo 'MySQL Error: ' . mysql_error();
-		exit;
-	}
-
-	while ($row = mysql_fetch_row($result)) {
-		echo "Table: {$row[0]}\n";
-	}
-
-	mysql_free_result($result);
-
-	
 	
 	mysql_close($conn);
 			
