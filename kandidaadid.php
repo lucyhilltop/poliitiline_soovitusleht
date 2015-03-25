@@ -41,35 +41,26 @@ include ("header.php");
 	
 	mysql_close($conn);
 	*/
-	$server = "tcp:ejx5shwlyf.database.windows.net,1433";
-    $user = "server@ejx5shwlyf";
-    $pwd = "Parool11";
-    $db = "andmebaas";
 	
-    $conn = mysqli_connect($server, $user, $pwd, $db)
-    if($conn == false){
-    	echo "<h2>Error</h2>";
-        die(print_r(sqlsrv_errors()));
-    }
-   
-    echo "<h2>Connectimisega on korras</h2>";
-	$sql = "SELECT * FROM Kandidaadid";
-	$result = mysqli_query($conn, $sql) or die(mysqli_error()); 
-	
-	mysqli_get_server_info($conn) . "\n"; 
-	echo "<br />"; 
-	echo "Database: <b>$db</b> was selected\n"
-	
-	if ($result->num_rows > 0) {
-		// output data of each row
-		while($row = $result->fetch_assoc()) {
-			echo "id: " . $row["ID"]. " - Name: " . $row["nimi"]."<br>";
-		}
-	} else {
-		echo "0 results";
+	// DB connection info
+	$host = "tcp:ejx5shwlyf.database.windows.net,1433";
+	$user = "server@ejx5shwlyf";
+	$pwd = "Parool11";
+	$db = "andmebaas";
+	try{
+		$conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
+		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+	}
+	catch(Exception $e){
+		die(print_r($e));
 	}
 	
-	$conn->close();
+	
+	$sql = "SELECT * FROM Kandidaadid";
+	$stmt = $conn->query($sql);
+	$items = $stmt->fetchAll(PDO::FETCH_NUM);
+	
+	echo $items;
 	
 	?>
 	
