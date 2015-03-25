@@ -45,7 +45,7 @@ include ("header.php");
 	}
 	*/
 	
-	$data = mysql_query("SELECT * FROM friends")  or die(mysql_error()); 
+	$data = mysql_query("SELECT * FROM Kandidaadid")  or die(mysql_error()); 
 	Print "<table border cellpadding=3>"; 
 	while($info = mysql_fetch_array( $data ))  
 	{  
