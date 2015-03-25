@@ -44,7 +44,7 @@ include ("header.php");
 	echo "<h3>Table created.</h3>";
 	*/
 	
-	$sql = "SELECT * FROM registration_tbl";
+	$sql = "SELECT * FROM Kandidaadid";
 	$result = mysqli_query($conn, $sql);
 	
 
