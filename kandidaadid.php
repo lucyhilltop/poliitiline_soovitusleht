@@ -18,15 +18,15 @@ include ("header.php");
     $user = "server@ejx5shwlyf";
     $pwd = "Parool11";
     $db = "andmebaas";
-    //$conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
+    $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
 
     if($conn == false){
     	echo "<h2>Error</h2>";
         die(print_r(sqlsrv_errors()));
     }
    
-    echo "<h2>Connectimisega on korras</h2>";
-	
+    echo "<h2>Connectimisega on korras</h2>"
+	/*
 	try{
     $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
@@ -42,7 +42,7 @@ include ("header.php");
 		die(print_r($e));
 	}
 	echo "<h3>Table created.</h3>";
-	
+	*/
 	
 	$sql = "SELECT * FROM registration_tbl";
 	$result = mysqli_query($conn, $sql);
