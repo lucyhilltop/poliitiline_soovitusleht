@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include ("header.php");
 ?>
 	
@@ -28,46 +28,20 @@ include ("header.php");
    
     echo "<h2>Connectimisega on korras</h2>";
 	$sql = "SELECT * FROM Kandidaadid";
-	$result = sqlsrv_fetch_array($sql);
+	
+	$stmt=sqlsrv_query($conn, $sql);
+	
+	$result = sqlsrv_fetch_array($stmt);
 	sqlsrv_errors();
 	
-	var_dump($result); 
-	if ($result) {
-	echo "Sain";
-    // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
-        echo " - Name: " . $row["nimi"]."<br>";
-    }
-	} else {
-		echo "0 results";
+	//var_dump($result); 
+	
+	while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+      echo $row['nimi']."<br />";
 	}
 	
-	mysql_close($conn);
+	sqlsrv_close($conn);
 	
-	echo "<h2>TEINE </h2>";
-	
-	
-	// DB connection info
-	$host = "tcp:ejx5shwlyf.database.windows.net,1433";
-	$user = "server@ejx5shwlyf";
-	$pwd = "Parool11";
-	$db = "andmebaas";
-	
-	echo "A";
-	try{
-		$conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
-		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-	}
-	catch(Exception $e){
-		die(print_r($e));
-	}
-	echo "A";
-	
-	$sql = "SELECT * FROM Kandidaadid";
-	$stmt = $conn->query($sql);
-	$items = $stmt->fetchAll(PDO::FETCH_NUM);
-	
-	echo $items;
 	
 	?>
 	
