@@ -28,7 +28,7 @@ include ("header.php");
    
     echo "<h2>Connectimisega on korras</h2>";
 	$sql = "SELECT * FROM Kandidaadid";
-	$result = sqlsrv_fetch_array($conn, $sql);
+	$result = sqlsrv_fetch_array($sql);
 	sqlsrv_errors();
 	
 	var_dump($result); 
