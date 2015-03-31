@@ -29,8 +29,8 @@ include ("header.php");
     echo "<h2>Connectimisega on korras</h2>";
 	$sql = "SELECT * FROM Kandidaadid";
 	$result = sqlsrv_fetch_array($conn, $sql);
-	
-	var_dump($result);
+	sqlsrv_ errors();
+	var_dump($result); 
 	if ($result) {
 	echo "Sain";
     // output data of each row
