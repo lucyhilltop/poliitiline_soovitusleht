@@ -23,13 +23,14 @@ include ("header.php");
     $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
     if($conn == false){
     	echo "<h2>Error</h2>";
-        die(print_r(sqlsrv_errors()));
+        die(print_r(sqlsrv_errors(),true));
     }
    
     echo "<h2>Connectimisega on korras</h2>";
 	$sql = "SELECT * FROM Kandidaadid";
 	$result = sqlsrv_fetch_array($conn, $sql);
 	sqlsrv_ errors();
+	
 	var_dump($result); 
 	if ($result) {
 	echo "Sain";
