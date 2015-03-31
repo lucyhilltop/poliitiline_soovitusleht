@@ -14,7 +14,7 @@ include ("header.php");
 		</thead>
 		
 	<?php
-	/*
+	
 	$server = "tcp:ejx5shwlyf.database.windows.net,1433";
     $user = "server@ejx5shwlyf";
     $pwd = "Parool11";
@@ -40,7 +40,9 @@ include ("header.php");
 	}
 	
 	mysql_close($conn);
-	*/
+	
+	echo "<h2>TEINE </h2>";
+	
 	
 	// DB connection info
 	$host = "tcp:ejx5shwlyf.database.windows.net,1433";
