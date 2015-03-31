@@ -15,7 +15,7 @@ include ("header.php");
 		
 	<?php
 	
-	$server = "tcp:ejx5shwlyf.database.windows.net,1433";
+	$server = "tcp:ejx5shwlyf.database.windows.net, 1433";
     $user = "server@ejx5shwlyf";
     $pwd = "Parool11";
     $db = "andmebaas";
@@ -28,9 +28,10 @@ include ("header.php");
    
     echo "<h2>Connectimisega on korras</h2>";
 	$sql = "SELECT * FROM Kandidaadid";
-	$result = mysqli_query($conn, $sql);
+	$result = sqlsrv_fetch_array($conn, $sql);
 	
-	if (mysql_num_rows($result) > 0) {
+	if ($result)) {
+	echo "Sain";
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
         echo " - Name: " . $row["nimi"]."<br>";
