@@ -1,5 +1,6 @@
 <?php
 include ("header.php");
+include ("dbfun.php");
 ?>
 	
 	<form action="#">
@@ -15,32 +16,15 @@ include ("header.php");
 		
 	<?php
 	
-	$server = "tcp:ejx5shwlyf.database.windows.net, 1433";
-    $user = "server@ejx5shwlyf";
-    $pwd = "Parool11";
-    $db = "andmebaas";
-	
-    $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
-    if($conn == false){
-    	echo "<h2>Error</h2>";
-        die(print_r(sqlsrv_errors(),true));
-    }
-   
-    echo "<h2>Connectimisega on korras</h2>";
+	$conn = connect();
 	$sql = "SELECT * FROM Kandidaadid";
-	
 	$stmt=sqlsrv_query($conn, $sql);
 	
-	$result = sqlsrv_fetch_array($stmt);
-	sqlsrv_errors();
-	
-	//var_dump($result); 
-	
-	while( $row = sqlsrv_fetch_array( $stmt, SQLSRV_FETCH_ASSOC) ) {
+	while( $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
       echo $row['nimi']."<br />";
 	}
+
 	
-	sqlsrv_close($conn);
 	
 	
 	?>

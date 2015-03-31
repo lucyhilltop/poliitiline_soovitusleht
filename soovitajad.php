@@ -8,21 +8,8 @@ include ("header.php");
 	</form>
 	
 	<?php
-	echo "<h2>Alustan</h2>";
-	$server = "tcp:ejx5shwlyf.database.windows.net,1433";
-    $user = "server@ejx5shwlyf";
-    $pwd = "Parool11";
-    $db = "andmebaas";
-    echo "<h2>Alustan Connectimist</h2>";
-    $conn = sqlsrv_connect($server, array("UID"=>$user, "PWD"=>$pwd, "Database"=>$db));
-
-    if($conn == false){
-    	echo "<h2>Error</h2>";
-        die(print_r(sqlsrv_errors()));
-    }
-    
+	$conn = connect();
 	
-    echo "<h2>Lõpetan</h2>";
 	$sql = "SELECT * FROM Soovitajad";
 	echo "<h2>sql valitud</h2>";
 	try {
