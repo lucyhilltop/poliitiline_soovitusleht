@@ -29,7 +29,7 @@ include ("header.php");
     echo "<h2>Connectimisega on korras</h2>";
 	$sql = "SELECT * FROM Kandidaadid";
 	$result = sqlsrv_fetch_array($conn, $sql);
-	sqlsrv_ errors();
+	sqlsrv_errors();
 	
 	var_dump($result); 
 	if ($result) {
