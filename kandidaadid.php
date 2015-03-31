@@ -30,7 +30,7 @@ include ("header.php");
 	$sql = "SELECT * FROM Kandidaadid";
 	$result = sqlsrv_fetch_array($conn, $sql);
 	
-	if ($result)) {
+	if ($result) {
 	echo "Sain";
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
