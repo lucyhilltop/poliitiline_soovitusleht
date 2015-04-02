@@ -4,6 +4,7 @@
 
 body {
 	background-color: #FFFFFF;
+	
 }
 
 #pais {
@@ -145,6 +146,58 @@ table, th, td {
 
 #soovitajad td:hover {
 	background-color:#4B8A08;
+}
+
+
+
+
+#invite {
+    margin:0 auto;
+    width:459px;
+}
+
+#invite label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:1px;
+	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+}
+
+#invite input, textarea{
+	width:439px;
+    height:27px;
+    background:#efefef;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:0.9em;
+    color:#3a3a3a;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+}
+
+#invite textarea {
+	height:180px;
+}
+
+#invite input:focus, textarea:focus {
+    border:1px solid #97d6ea;
+}
+
+#invite submit {
+	height: _the_image_height;
+    width: _the_image_width;
+    background:url(pildid/submit.jpg);
+    text-indent:-9999px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+#submit:hover {
+	    opacity:.9;
 }
 
 
