@@ -200,4 +200,8 @@ table, th, td {
 	    opacity:.9;
 }
 
+.error {
+    color: #FF0000;
+}
+
 

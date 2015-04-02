@@ -1,6 +1,6 @@
 ﻿<?php
 include ("header.php");
-include ("dbfun.php");
+include ("funktsioonid/dbfun.php");
 ?>
 
 	<form action="#">
