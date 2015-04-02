@@ -35,18 +35,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <div id="invite">
     
-	<form method="post" action="funktsioonid/invite.php">
+	<form method="post" action="funktsioonid/invite.php" onsubmit="return validateForm()">
 			
 		<label>Nimi</label>
-		<input name="nimi" placeholder="Kandidaadi nimi">
+		<input name="nimi" placeholder="Kandidaadi nimi" required>
 		<span class="error"><?php echo $nameErr;?></span>
 				
 		<label>Number</label>
-		<input name="number"  placeholder="Kandidaadi number">
+		<input name="number"  placeholder="Kandidaadi number" required>
 		<span class="error"><?php echo $numErr;?></span>
 		
 		<label>Erakond</label>
-		<input name="erakond"  placeholder="Kandidaadi erakond">
+		<input name="erakond"  placeholder="Kandidaadi erakond" required>
 		<span class="error"><?php echo $partyErr;?></span>
 		
 		<label>Kirjeldus</label>

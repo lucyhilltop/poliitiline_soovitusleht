@@ -119,6 +119,7 @@ body {
 
 table {
 	border-collapse: collapse;
+	float:left;
 }
 
 table, th, td {
@@ -189,7 +190,7 @@ table, th, td {
 #invite submit {
 	height: _the_image_height;
     width: _the_image_width;
-    background:url(pildid/submit.jpg);
+    background:url('pildid/submit.jpg' );
     text-indent:-9999px;
     border:none;
     margin-top:20px;
@@ -203,5 +204,42 @@ table, th, td {
 .error {
     color: #FF0000;
 }
+
+
+
+#nurkkonteiner {
+	visibility: hidden;
+	font-size:16px;
+    position:relative;
+    width:480px;
+    padding:1em 1.5em;
+    margin:2em auto;
+    color:#fff;
+    background:#97C02F;
+    overflow:hidden;
+	min-height: 300px;
+}
+
+#nurkkonteiner:before {
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    border-width:0 16px 16px 0; /* This trick side-steps a webkit bug */
+    border-style:solid;
+    border-color:#fff #fff #658E15 #658E15; /* A bit more verbose to work with .rounded too */
+    background:#658E15; /* For Opera when also applying a border-radius */
+    display:block; width:0; /* Only for Firefox 3.0 damage limitation */
+    /* Optional: shadow */
+    -webkit-box-shadow:0 3px 3px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+       -moz-box-shadow:0 3px 3px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+            box-shadow:0 3px 3px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+	
+}
+
+
+
+
+
 
 
