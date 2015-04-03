@@ -10,6 +10,8 @@ include ("header.php");
 <CENTER>
 <fb:login-button scope="public_profile,email" data-size="xlarge" onlogin="checkLoginState();">
 </fb:login-button>
+<fb:logout-button>
+</fb:logout-button>
 </CENTER>
 <script src="js/facebook.js"></script>
 
