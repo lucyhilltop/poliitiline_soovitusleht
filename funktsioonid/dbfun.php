@@ -35,7 +35,15 @@ function getOneKandi($id)
 	*/
 	
 	$conn = connect();
-	$sql = "SELECT * FROM Kandidaadid WHERE Kandidaadid.ID=".$id;
+	//$sql = "SELECT * FROM Kandidaadid WHERE Kandidaadid.ID=".$id;
+	
+	$sql = "SELECT Kandidaadid.nimi, Kandidaadid.number, Erakonnad.ErakonnaNimi, Kandidaadid.kirjeldus
+	FROM Kandidaadid
+	INNER JOIN Erakonnad
+	ON Kandidaadid.erakond=Erakonnad.ID
+	WHERE Kandidaadid.ID=".$id;
+	
+	
 	$stmt=sqlsrv_query($conn, $sql);
 	/*
 	$xml->command("indiviid",
@@ -46,7 +54,7 @@ function getOneKandi($id)
 		$data=[
 		"nimi"  => $row["nimi"],
 		"number" =>$row['number'],
-		"erakond" =>$row['erakond'],
+		"erakond" =>$row['ErakonnaNimi'],
 		"kirjeldus" =>$row['kirjeldus']
 		];
 		
