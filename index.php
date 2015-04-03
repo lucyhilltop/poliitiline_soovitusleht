@@ -22,13 +22,15 @@ include ("funktsioonid/dbfun.php");
 			?>
 			</ol>
 	</div>
-	
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="pirukas.js">
+    </script>
 	<div id="graaf">
 		<h3>Aega järgmiste valimisteni:</h3>
 			<span id="countdown">21 päeva, 2 tundi, 5 minutit, 14 sekundit</span>
         <script src="countdown.js"></script>
 		<h3>Erakondade populaarsus:</h3>
-			<img src="pildid/pirukas.png" alt="pirukas">
+        <div id="donutchart" style="height: 400px; width: 500px;"></div>
 	</div>
 	
 	<div class="clear"></div>
