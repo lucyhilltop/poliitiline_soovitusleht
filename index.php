@@ -1,15 +1,25 @@
 ﻿<?php
 include ("header.php");
+include ("funktsioonid/dbfun.php");
 ?>
 
 	<div id= "populaarsed">
 		<h1> Populaarseimad kandidaadid:</h1>
 			<ol>
-				<li><img src="pildid/edgar.jpg" alt="Edgar"><a href="kandidaadid.html">Edgar Savisaar, Keskerakond</a></li>
-				<li><img src="pildid/roivas.jpg" alt="Roivas"><a href="kandidaadid.html">Taavi Rõivas, Reformierakond</a></li>
-				<li><img src="pildid/edgar.jpg" alt="Edgar"><a href="kandidaadid.html">Edgar Savisaar, Keskerakond</a></li>
-				<li>
-				<li>
+			<?php
+				$top=getTop();
+				foreach ($top as $kandi){
+					echo '<li><a href="kandidaadid.html">'.$kandi.'</a></li> ';
+				}
+			/*
+				while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
+				  echo '<tr><td><a href="#" class="button"
+					id='.$row["ID"].'
+					onClick="getDataKandi(this.id)"  
+				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></td></tr>';
+			}
+			*/
+			?>
 			</ol>
 	</div>
 	
