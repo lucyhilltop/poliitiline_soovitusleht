@@ -18,6 +18,6 @@
 		<li><a href="soovitajad.php" class="button">Soovitajad</a></li>
 		<li><a href="kandidaadid.php" class="button">Kandidaadid</a></li>
 		<li><a href="kutse.php" class="button">Kutse</a></li>
-		<li><a href="minukandidaadid.php" class="button">Minu kandidaadid</a></li>
+		<li><a href="minukandidaadid.html" class="button">Minu kandidaadid</a></li>
 	</ul>
 	
