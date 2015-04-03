@@ -9,7 +9,7 @@ include ("funktsioonid/dbfun.php");
 			<?php
 				$top=getTop();
 				foreach ($top as $kandi){
-					echo '<li><a href="kandidaadid.html">'.$kandi.'</a></li> ';
+					echo '<li><a href="#">'.$kandi.'</a></li> ';
 				}
 			/*
 				while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
