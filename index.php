@@ -25,7 +25,8 @@ include ("funktsioonid/dbfun.php");
 	
 	<div id="graaf">
 		<h3>Aega järgmiste valimisteni:</h3>
-			<img src="pildid/counter.jpg" alt="counter">
+			<span id="countdown">21 päeva, 2 tundi, 5 minutit, 14 sekundit</span>
+        <script src="countdown.js"></script>
 		<h3>Erakondade populaarsus:</h3>
 			<img src="pildid/pirukas.png" alt="pirukas">
 	</div>
