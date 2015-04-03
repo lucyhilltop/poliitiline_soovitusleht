@@ -6,27 +6,41 @@ var xmlHttp = createXmlHttpRequestObject();
 
 
 //aktiveerub Kandidaatide nimekirjale vajutades, saadab AJAXiga p'ringu andmete saamiseks
-function getData(id) {
-		if (xmlHttp.readyState==0 || xmlHttp.readyState==4){
-			var param= "ID="+id;
-			var url= 'ajax/data.php';
-			
-			xmlHttp.open("POST", url, true);
-			xmlHttp.onreadystatechange = handleServerResponse;
-			
-			xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-			xmlHttp.setRequestHeader("Content-length", param.length);
-			xmlHttp.setRequestHeader("Connection", "close");
-
-			xmlHttp.send(param);
-		}else{
-			setTimeout('process()',1000);
-		}
-	}
+function getDataKandi(id) {
+	var url= 'ajax/KandiData.php';
+	var param= "ID="+id;
 	
+	getData(param,url)
+	
+}
+
+//aktiveerub Soovitajate nimekirjale vajutades, saadab AJAXiga p'ringu andmete saamiseks
+function getDataSoov(id) {
+	var url= 'ajax/SoovitData.php';
+	var param= "ID="+id;
+	
+	getData(param,url)
+}
+
+function getData(param,url) {
+	if (xmlHttp.readyState==0 || xmlHttp.readyState==4){
+
+		xmlHttp.open("POST", url, true);
+		xmlHttp.onreadystatechange = handleServerResponseKandi;
+		
+		xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xmlHttp.setRequestHeader("Content-length", param.length);
+		xmlHttp.setRequestHeader("Connection", "close");
+
+		xmlHttp.send(param);
+	}else{
+		setTimeout('process()',1000);
+	}
+}
+
 	
 //Kui andmebaas on vastanud p'ringule, siis see meetod tegeleb tulemiga
-function handleServerResponse() {
+function handleServerResponseKandi() {
 	if (xmlHttp.readyState==4){
 		if(xmlHttp.status==200){
 			xmlResponse=xmlHttp.responseXML;
@@ -45,7 +59,7 @@ function handleServerResponse() {
 			
 			setTimeout('process()',1000);
 		}else{
-			alert("22 midagi laks valesti...");
+			alert("Soovitajates see veel ei toota/ midagi laks valesti...");
 		}
 	}
 }

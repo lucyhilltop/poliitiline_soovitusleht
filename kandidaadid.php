@@ -16,6 +16,7 @@ include ("funktsioonid/dbfun.php");
 		<tbody>
 		
 		<?php
+			$type ="kandidaadid";
 		
 			$conn = connect();
 			$sql = "SELECT * FROM Kandidaadid";
@@ -25,7 +26,7 @@ include ("funktsioonid/dbfun.php");
 			while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
 				  echo '<tr><td><a href="#" class="button"
 					id='.$row["ID"].'
-					onClick="getData(this.id)"  
+					onClick="getDataKandi(this.id)"  
 				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></td></tr>';
 				  $miturida++;
 			}

@@ -23,9 +23,6 @@ if (isset($_POST["ID"])=== true && empty($_POST["ID"])=== false) {
 	echo "<kirjeldus>";
 		echo $data["kirjeldus"]."\n";
 	echo"</kirjeldus>";
-	
-
-	//echo $data["number"]."\n";
 }
 else{
 	echo "ei toota";
