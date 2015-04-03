@@ -1,6 +1,4 @@
 <?php
-
-
 //andmebaassiga yhendamine
 function connect()
 {
@@ -30,9 +28,20 @@ function getAll($table)
 // votab koik info kandidaadaadi kohta
 function getOneKandi($id)
 {
+	/*
+	include "class.xmlresponse.php";
+	$xml = new xmlResponse();
+	$xml->start();
+	*/
+	
 	$conn = connect();
 	$sql = "SELECT * FROM Kandidaadid WHERE Kandidaadid.ID=".$id;
 	$stmt=sqlsrv_query($conn, $sql);
+	/*
+	$xml->command("indiviid",
+    array("nimi"  => $row["nimi"], "number" =>$row['number'], "erakond" =>$row['erakond'],"kirjeldus" =>$row['kirjeldus'])
+	);
+	*/
 	while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
 		$data=[
 		"nimi"  => $row["nimi"],
@@ -43,7 +52,7 @@ function getOneKandi($id)
 		
 	}
 	return $data;
-	
+
 	
 }
 

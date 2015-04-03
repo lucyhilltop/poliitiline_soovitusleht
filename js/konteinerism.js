@@ -6,9 +6,17 @@ var xmlHttp = createXmlHttpRequestObject();
 
 function getData(id) {
 		if (xmlHttp.readyState==0 || xmlHttp.readyState==4){
-			xmlHttp.open("POST", 'ajax/data.php?ID='+id, true);
+			var param= "ID="+id;
+			var url= 'ajax/data.php';
+			
+			xmlHttp.open("POST", url, true);
 			xmlHttp.onreadystatechange = handleServerResponse;
-			xmlHttp.send();
+			
+			xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlHttp.setRequestHeader("Content-length", param.length);
+			xmlHttp.setRequestHeader("Connection", "close");
+
+			xmlHttp.send(param);
 		}else{
 			setTimeout('process()',1000);
 		}
@@ -27,13 +35,14 @@ function handleServerResponse() {
 		if(xmlHttp.status==200){
 			xmlResponse=xmlHttp.responseXML;
 			xmlDocumentElement=xmlResponse.documentElement;
-			message= xmlDocumentElement.firstChild.data;
+			//message= xmlDocumentElement.firstChild.data;
 			
+			message= xmlDocumentElement.childNodes;
 			
-			document.getElementById("nimi").innerHTML = message;
-			
-			alert(message);
-			
+			document.getElementById("KNimi").innerHTML = message[1].firstChild.nodeValue;
+			document.getElementById("KNumber").innerHTML = "nr "+message[2].firstChild.nodeValue;
+			document.getElementById("KErakond").innerHTML = message[3].firstChild.nodeValue;
+			document.getElementById("KKirjeldus").innerHTML = message[4].firstChild.nodeValue;
 			document.getElementById("nurkkonteiner").style.visibility="visible"
 			
 			setTimeout('process()',1000);

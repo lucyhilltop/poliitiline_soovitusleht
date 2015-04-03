@@ -43,13 +43,13 @@ include ("funktsioonid/dbfun.php");
 	<script src="js/konteinerism.js"></script>
 
 	<div id="nurkkonteiner">
-		<h1 id="nimi">Nimi</h1>
-		<h2 id="number">Number</h2>
-		<p id="erakond">
+		<h1 id="KNimi">Nimi</h1>
+		<h2 id="KNumber">Number</h2>
+		<p id="KErakond">
 		Erakond
 		</p>
 		
-		<p id="kirjeldus">
+		<p id="KKirjeldus">
 		Kirjeldus
 		</p>
 		
