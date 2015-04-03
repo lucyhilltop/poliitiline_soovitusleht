@@ -8,10 +8,8 @@ include ("header.php");
   the FB.login() function when clicked.
 -->
 <CENTER>
-<fb:login-button scope="public_profile,email" data-size="xlarge" onlogin="checkLoginState();">
+<fb:login-button autologoutlink="true" scope="public_profile,email" data-size="xlarge" onlogin="checkLoginState();">
 </fb:login-button>
-<fb:logout-button>
-</fb:logout-button>
 </CENTER>
 <script src="js/facebook.js"></script>
 
