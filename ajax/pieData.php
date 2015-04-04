@@ -1,5 +1,6 @@
 <?php
-require 'dbfun.php';
+require '..\funktsioonid\dbfun.php';
+
 $data = getPie();
 
 $newData = array_map(function($el) {
