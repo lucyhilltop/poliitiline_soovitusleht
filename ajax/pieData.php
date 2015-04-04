@@ -7,7 +7,7 @@ $newData = array_map(function($el) {
     return [
     'value' => $el['arv'],
     'label' => $el['ErakonnaNimi'],
-    'color' => $el['värv']
+    'color' => $el['varv']
     ];
 }, $data);
 
