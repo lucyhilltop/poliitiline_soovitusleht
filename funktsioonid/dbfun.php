@@ -55,11 +55,11 @@ function getOneKandi($id)
 function getOneSoovit($id)
 {
 	$conn = connect();
-	$sql = "SELECT Kandidaadid.nimi, Kandidaadid.number, Erakonnad.ErakonnaNimi, Kandidaadid.kirjeldus
-	FROM Kandidaadid
-	INNER JOIN Erakonnad
-	ON Kandidaadid.erakond=Erakonnad.ID
-	WHERE Kandidaadid.ID=".$id;
+	$sql = "SELECT Soovitajad.nimi, COUNT(Toetus.SoovitajaID) AS toetanud FROM Toetus
+	LEFT JOIN Soovitajad
+	ON Soovitajad.ID=Toetus.SoovitajaID
+	WHERE Soovitajad.ID=".$id."
+	GROUP BY nimi";
 	
 	
 	$stmt=sqlsrv_query($conn, $sql);
@@ -67,9 +67,7 @@ function getOneSoovit($id)
 	while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
 		$data=[
 		"nimi"  => $row["nimi"],
-		"number" =>$row['number'],
-		"erakond" =>$row['ErakonnaNimi'],
-		"kirjeldus" =>$row['kirjeldus']
+		"toetanud" =>$row['toetanud'],
 		];
 		
 	}
@@ -77,7 +75,7 @@ function getOneSoovit($id)
 
 }
 
-// votab koik info soovitaja kohta
+// votab top 3e 
 function getTop()
 {
 	$conn = connect();
