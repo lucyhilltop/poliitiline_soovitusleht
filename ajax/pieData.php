@@ -11,5 +11,4 @@ $newData = array_map(function($el) {
     ];
 }, $data);
 
-echo json_encode($newData);
-?>
+var_dump($newData);
