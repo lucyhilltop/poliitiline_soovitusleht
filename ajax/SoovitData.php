@@ -12,17 +12,9 @@ if (isset($_POST["ID"])=== true && empty($_POST["ID"])=== false) {
 		echo $data["nimi"]."\n";
 	echo"</nimi>";
 	
-	echo "<number>";
-		echo $data["number"]."\n";
-	echo"</number>";
-	
-	echo "<erakond>";
-		echo $data["erakond"]."\n";
-	echo"</erakond>";
-	
-	echo "<kirjeldus>";
-		echo $data["kirjeldus"]."\n";
-	echo"</kirjeldus>";
+	echo "<toetanud>";
+		echo $data["toetanud"]."\n";
+	echo"</toetanud>";
 	
 
 }
