@@ -5,10 +5,10 @@ $data = getPie();
 
 $newData = array_map(function($el) {
     return [
-    'value' => 5,
-    'label' => 'ErakonnaNimi',
-    'color' => '#FA58F4'
+    'value' => $el['arv'],
+    'label' => $el['ErakonnaNimi'],
+    'color' => $el['värv']
     ];
 }, $data);
 
-var_dump($newData);
+echo json_encode($newData);

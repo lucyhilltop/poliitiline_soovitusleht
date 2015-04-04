@@ -89,6 +89,12 @@ function getTop()
 function getPie () {
     $conn = connect();
     $sql = "SELECT * FROM pirukas";
-    return $stmt = sqlsrv_query($conn, $sql);
+    $stmt = sqlsrv_query($conn, $sql);
+    $data=array();
+
+    while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
+        array_push($data, $row);
+    }
+    return $data;
 }
 ?>
