@@ -164,6 +164,16 @@ table, th, td {
 	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
 }
 
+#invite p1 {
+    display:block;
+    margin-top:20px;
+	margin-bottom:20px;
+    letter-spacing:1px;
+	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	font-style: bold;
+	font-size: 30px;
+}
+
 #invite input, textarea{
 	width:439px;
     height:27px;

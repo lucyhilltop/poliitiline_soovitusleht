@@ -1,8 +1,10 @@
 ﻿<?php
 include ("header.php");
 include ("funktsioonid/dbfun.php");
-?>
+$_SESSION["kasutaja"] = "eee";
 
+?>
+	
 	<div id= "populaarsed">
 		<h1> Populaarseimad kandidaadid:</h1>
 			<ol>
@@ -20,8 +22,20 @@ include ("funktsioonid/dbfun.php");
 			}
 			*/
 			?>
-			</ol>
+			</ol>		
 	</div>
+	
+	
+	<CENTER>
+	<fb:login-button autologoutlink="true" scope="public_profile,email" data-size="xlarge" onlogin="checkLoginState();">
+	</fb:login-button>
+	</CENTER>
+	<script src="js/facebook.js"></script>
+	<p1></p1>
+	<div id="status">
+	</div>
+	
+	
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="pirukas.js">
     </script>
