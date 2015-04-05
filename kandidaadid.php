@@ -22,19 +22,23 @@ include ("funktsioonid/dbfun.php");
 			$sql = "SELECT * FROM Kandidaadid";
 			$stmt=sqlsrv_query($conn, $sql);
 			
+			$kandiID=0;
+			
 			$miturida=0;
 			while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
 				  echo '<tr><td><a href="#" class="button"
 					id='.$row["ID"].'
-					onClick="getDataKandi(this.id)"  
+					onClick="$kandiID=this.id;getDataKandi($kandiID);"  
 				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></td></tr>';
 				  $miturida++;
+				  
 			}
 			//kui on vähe liikmeid, siis kuvatakse tyhju kaste. Lihtsalt visuaalne asi.
 			while($miturida<13){
 				echo '<tr><td><a href="kandidaadid.php" class="button"></a></td></tr>';
 				$miturida++;
 			}
+			
 		?>
 
 		</tbody>
@@ -52,25 +56,37 @@ include ("funktsioonid/dbfun.php");
 	
 	</div>
 	
-	
-	<script src="js/jquery-1.11.2.min.js"></script>
-	<script src="js/konteinerism.js"></script>
 
+	
 	<div id="nurkkonteiner">
 		<h1 id="KNimi">Nimi</h1>
 		<h2 id="KNumber">Number</h2>
 		<p id="KErakond">
 		Erakond
 		</p>
-		
+
 		<p id="KKirjeldus">
 		Kirjeldus
 		</p>
-		
+	
+	
 	<div id="toetus">
-		<input id= "Toetus" type="image" src="css/pildid/up.png" alt="Toetan!" width="110" height="80";>
+		<div id="toetusMessage">
+			<label >Toetustearv tuleb siia</label>
+		</div>
+		<input onclick="like('tainas','myID')" type="image" src="css/pildid/up.png" alt="Toetan!" width="110" height="80";>
+		
+		<input  type="hidden" value="z" id="myID"/>
+		<input type="hidden" value="z" id="KandiID"/>
+		
 	</div>
+	
+	
 	</div>
+	
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/konteinerism.js"></script>
+	<script src="js/toetus.js"></script>
 
 	
 </div>

@@ -27,7 +27,7 @@ function getAll($table)
 function getOneKandi($id)
 {
     $conn = connect();
-    $sql = "SELECT Kandidaadid.nimi, Kandidaadid.number, Erakonnad.ErakonnaNimi, Kandidaadid.kirjeldus
+    $sql = "SELECT Kandidaadid.nimi, Kandidaadid.number, Erakonnad.ErakonnaNimi, Kandidaadid.kirjeldus, Kandidaadid.ID
 	FROM Kandidaadid
 	INNER JOIN Erakonnad
 	ON Kandidaadid.erakond=Erakonnad.ID
@@ -40,7 +40,8 @@ function getOneKandi($id)
             "nimi"  => $row["nimi"],
             "number" =>$row['number'],
             "erakond" =>$row['ErakonnaNimi'],
-            "kirjeldus" =>$row['kirjeldus']
+            "kirjeldus" =>$row['kirjeldus'],
+			"ID" =>$row['ID']
         ];
 
     }

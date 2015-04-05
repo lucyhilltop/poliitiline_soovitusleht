@@ -1,16 +1,11 @@
-//siin failis tegeletakse kandidaatide info kuvamise asjadega, mis on js
-
+// TOETUSE AJAXI ASJAD - ppraeug on copy konteinerismis lihtslat
 
 var xmlHttp = createXmlHttpRequestObject();
 
-
-
 //aktiveerub Kandidaatide nimekirjale vajutades, saadab AJAXiga p'ringu andmete saamiseks
-function getDataKandi(id) {
-	var url= 'ajax/KandiData.php';
-	var param= "ID="+id;
-	
-	getData(param,url, "kandidaat")
+function like(KandiID,myID) {
+	//alert(KandiID);
+	//alert(myID);
 	
 }
 
@@ -57,11 +52,6 @@ function handleServerResponseKandi() {
 			document.getElementById("KNumber").innerHTML = "nr "+data[2].firstChild.nodeValue;
 			document.getElementById("KErakond").innerHTML = data[3].firstChild.nodeValue;
 			document.getElementById("KKirjeldus").innerHTML = data[4].firstChild.nodeValue;
-			
-			//alert (data[5].firstChild.nodeValue);
-			//document.getElementById("KandiID").value=data[5].firstChild.nodeValue;
-
-			
 			
 			//tuuakse nahtavale konteiner
 			document.getElementById("nurkkonteiner").style.visibility="visible"

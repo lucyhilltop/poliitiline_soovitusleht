@@ -305,6 +305,14 @@ table, th, td {
 	position: absolute;
 	bottom: 5px;
     right: 0;
+	
+}
+#toetusMessage {
+	position: absolute;
+	bottom: 25px;
+    right: 100px;
+	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	letter-spacing:1px;
 }
 
 #fb{
