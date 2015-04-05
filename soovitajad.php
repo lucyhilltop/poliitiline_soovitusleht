@@ -38,6 +38,20 @@ include ("funktsioonid/dbfun.php");
 		</tbody>
 	</table>
 	
+	<div id="fb">
+		<fb:login-button autologoutlink="true" scope="public_profile,email" data-size="medium" 
+		onlogin="checkLoginState();">
+		</fb:login-button>
+
+		<script src="js/facebook.js"></script>
+		
+		<div id="status">
+		</div>
+	
+	</div>
+	
+	
+	
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/konteinerism.js"></script>
 
@@ -50,6 +64,7 @@ include ("funktsioonid/dbfun.php");
 		
 	</div>
 
+	
 	
 	
 </div>

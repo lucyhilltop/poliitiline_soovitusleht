@@ -4,7 +4,7 @@
 	<head>
 	<meta charset="utf-8">
 		<title>PoliitilineSoovitus</title>
-		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 		<style type="text/css"></style>
 	</head>
 <body>
@@ -12,6 +12,8 @@
 	<div id='pais'>
 			<p id='pealkiri'>Poliitiline soovitusleht</p>
     </div>
+	
+	
 	
 	<ul id="lehed">
 		<li><a href="index.php" class="button">Avaleht</a></li>

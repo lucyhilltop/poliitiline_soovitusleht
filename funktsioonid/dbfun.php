@@ -63,8 +63,20 @@ function getOneSoovit($id)
             "nimi"  => $row["nimi"],
             "toetanud" =>$row['toetanud'],
         ];
-
     }
+	
+	if (!isSet($data)){
+		 $sql = "SELECT nimi FROM Soovitajad WHERE Soovitajad.ID=".$id;
+		 $stmt=sqlsrv_query($conn, $sql);
+		 
+		 while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
+			$data=[
+				"nimi"  => $row["nimi"],
+				"toetanud" =>"0",
+			];
+    }
+	}
+	
     return $data;
 }
 // votab top 3e 

@@ -40,6 +40,19 @@ include ("funktsioonid/dbfun.php");
 		</tbody>
 	</table>
 	
+	<div id="fb">
+		<fb:login-button autologoutlink="true" scope="public_profile,email" data-size="medium" 
+		onlogin="checkLoginState();">
+		</fb:login-button>
+
+		<script src="js/facebook.js"></script>
+		
+		<div id="status">
+		</div>
+	
+	</div>
+	
+	
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/konteinerism.js"></script>
 
@@ -54,6 +67,9 @@ include ("funktsioonid/dbfun.php");
 		Kirjeldus
 		</p>
 		
+	<div id="toetus">
+		<input id= "Toetus" type="image" src="css/pildid/up.png" alt="Toetan!" width="110" height="80";>
+	</div>
 	</div>
 
 	

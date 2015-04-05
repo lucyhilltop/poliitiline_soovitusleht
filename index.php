@@ -22,6 +22,19 @@ include ("funktsioonid/dbfun.php");
 			?>
 			</ol>
 	</div>
+	
+	<div id="fb">
+		<fb:login-button autologoutlink="true" scope="public_profile,email" data-size="medium" 
+		onlogin="checkLoginState();">
+		</fb:login-button>
+
+		<script src="js/facebook.js"></script>
+		
+		<div id="status">
+		</div>
+	
+	</div>
+	
     <script type="text/javascript" src="countdown.js"></script>
 	<div id="graaf">
 		<h3>Aega järgmiste valimisteni:</h3>

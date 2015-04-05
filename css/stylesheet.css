@@ -1,3 +1,4 @@
+
 .clear {
 	clear: both;
 }
@@ -7,11 +8,42 @@ body {
 	
 }
 
+
+#menu-wrapper {
+		height: 90px;
+		background: url(pildid/menu.jpg) no-repeat center top;
+	}
+#nav {
+		height: 80px;
+	}
+	
+	#nav ul {
+		text-align: center;
+	}
+	
+	#nav li {
+		display: inline-block;
+		padding: 0px 20px;
+	}
+	
+	#nav a {
+		display: block;
+		float: left;
+		margin-right: 2px;
+		text-decoration: none;
+		text-transform: uppercase;
+		line-height: 45px;
+		font-size: 13pt;
+		color: #16576B;
+	}
+
+
+
 #pais {
 	height: 150px;
 	/*width: 900px;*/
 	background: url(pildid/pais.jpg);
-	}
+}
 
 #pealkiri {
 	font-size: 50px;
@@ -151,6 +183,8 @@ table, th, td {
 
 
 
+
+
 #inviteheader {
     margin:0 auto;
     width:459px;
@@ -241,12 +275,14 @@ table, th, td {
 	font-size:16px;
     position:relative;
     width:480px;
-    padding:1em 1.5em;
-    margin:2em auto;
+    padding:1em 1.5em 5em;
+    margin:2em 20em;
     color:#fff;
-    background:#97C02F;
+    background:#585858;
     overflow:hidden;
 	min-height: 300px;
+	box-shadow: 8px 8px 5px #888888;
+	
 }
 
 #nurkkonteiner:before {
@@ -257,7 +293,7 @@ table, th, td {
     border-width:0 16px 16px 0; /* This trick side-steps a webkit bug */
     border-style:solid;
     border-color:#fff #fff #658E15 #658E15; /* A bit more verbose to work with .rounded too */
-    background:#658E15; /* For Opera when also applying a border-radius */
+    background:#585858; /* For Opera when also applying a border-radius */
     display:block; width:0; /* Only for Firefox 3.0 damage limitation */
     /* Optional: shadow */
     -webkit-box-shadow:0 3px 3px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
@@ -265,7 +301,19 @@ table, th, td {
             box-shadow:0 3px 3px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
 	
 }
+#toetus {
+	position: absolute;
+	bottom: 5px;
+    right: 0;
+}
 
+#fb{
+	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	letter-spacing:1px;
+	position:relative;
+	float:right;
+	padding:1em 2em;
+}
 
 
 
