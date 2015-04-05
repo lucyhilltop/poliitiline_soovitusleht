@@ -2,10 +2,10 @@
 
 <html>
     <head>
-        <meta http-equiv="refresh" content="3;url=../index.php" />
+        <meta http-equiv="refresh" content="3;url=../minukandidaadid.php" />
     </head>
     <body>
-        <h1>Suunan pealehele kolme sekundi parast...</h1>
+        <h1>Suunan edasi kolme sekundi parast...</h1>
     </body>
 </html>
 
@@ -14,23 +14,19 @@
 include ("dbfun.php");
 
 if ($_POST['submit']) {
-	$nimi = $_POST['nimi'];
-    $number = $_POST['number'];
-    $erakond = $_POST['erakond'];
-	$kirjeldus = $_POST['kirjeldus'];
-	$FBID = $_POST['FBID'];
-	$FBname = $_POST['FBname'];
-	
-	
-	//kandidaadi lisamine
-    $conn = connect();
-	lisaKandi($conn);
+	$data;
+	$conn = connect();
 	
 	// Kontrollitakse, kas soovitaja on andmebaasis ja vajadusel lisatakse
 	SoovitajaKontroll($conn);
 	
+	//kandidaadi lisamine
+	lisaKandi($conn);
+	
 	//Lisatakse lisamine
 	lisaLisamine($conn);
+
+	
 }
 
 // lisab kandidaadi andmebaasi
@@ -58,7 +54,7 @@ function SoovitajaKontroll($conn){
 	$FBID = $_POST['FBID'];
 
 	//kontroll, kas soovitaja on andmebaasis
-	$sql ="SELECT count(*) as mitu FROM Soovitajad WHERE FBID= 10205553266944383";
+	$sql ="SELECT count(*) as mitu FROM Soovitajad WHERE FBID=". $FBID;
 	$stmt = sqlsrv_query($conn, $sql);
 	
 	while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {

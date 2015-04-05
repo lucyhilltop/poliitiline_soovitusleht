@@ -53,8 +53,6 @@ if (isset($_POST["FBID"])=== true && empty($_POST["FBID"])=== false) {
 
 
 ?>
-<p1 id="ahv"></p1>
-
 <div id="invite">
 
 	<form method="post" action="funktsioonid/invitedb.php" onsubmit="return validateForm()">
