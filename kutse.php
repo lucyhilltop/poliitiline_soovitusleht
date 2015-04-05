@@ -42,10 +42,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 	<p1 id="juhis"></p1>
 </div>
+<?php
+
+	
+if (isset($_POST["FBID"])=== true && empty($_POST["FBID"])=== false) {
+	echo $_POST["FBID"];
+	
+}
+
+
+
+?>
+<p1 id="ahv"></p1>
 
 <div id="invite">
 
-	<form method="post" action="funktsioonid/invite.php" onsubmit="return validateForm()">
+	<form method="post" action="funktsioonid/invitedb.php" onsubmit="return validateForm()">
 			
 		<label>Nimi</label>
 		<input name="nimi" placeholder="Kandidaadi nimi" required>
@@ -61,7 +73,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		
 		<label>Kirjeldus</label>
 		<textarea name="kirjeldus" placeholder="Lühike ülevaade kandidaadist"></textarea>
-				
+		
+		<input type="hidden" name="FBID" value="" id="FBID"/>
+		<input type="hidden" name="FBname" value="" id="FBname"/>
+		
 		<input id="submit" name="submit" type="submit" value="Submit">
 	
 	</form>

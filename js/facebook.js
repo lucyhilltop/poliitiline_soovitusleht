@@ -1,5 +1,6 @@
 
   // This is called with the results from from FB.getLoginStatus().
+  var name;
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -9,6 +10,7 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
+	  getFBID(response);
       testAPI();
 	  autoriseeritus('connected');
     } else if (response.status === 'not_authorized') {
@@ -76,6 +78,7 @@
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Tere, ' + response.name + '!';
+		name= response.name;
     });
   }
  
@@ -99,7 +102,14 @@ function autoriseeritus(status) {
 	}
 	
 }
+function getFBID(response) {
+	var FBID= response.authResponse.userID;
 
+	var FBname= response.name;
+	document.getElementById("FBID").value=FBID;
+	document.getElementById("FBname").value=name;
+	
+    }
 function createXmlHttpRequestObject(){
 	var xmlHttp;
 	if(window.ActiveXObject){
@@ -123,6 +133,7 @@ function createXmlHttpRequestObject(){
 	}
 	
 }
+
  
  
  
