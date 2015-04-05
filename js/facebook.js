@@ -10,15 +10,16 @@
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
       testAPI();
+	  autoriseeritus('connected');
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
+      document.getElementById('status').innerHTML = 'Palun logi sisse ';
+	  autoriseeritus('not_authorized');
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
+      document.getElementById('status').innerHTML = 'Palun logi sisse';
+	  autoriseeritus('not_loggedin');
     }
   }
 
@@ -77,3 +78,53 @@
         'Tere, ' + response.name + '!';
     });
   }
+ 
+ //kasutaja aktiviseeritusele reageerija
+function autoriseeritus(status) {
+
+	if(status=='connected'){
+		document.getElementById("juhis").innerHTML = "Siin saad lisada lehele uue kandidaadi";
+		//tuuakse nahtavale konteiner
+		document.getElementById("invite").style.visibility="visible";
+	}
+	if(status=='not_loggedin'){
+		document.getElementById("juhis").innerHTML = "Uue kandidaadi lisamiseks logi sisse";
+		//tuuakse nahtavale konteiner
+		document.getElementById("invite").style.visibility="hidden";
+	}
+	if(status=='not_loggedin'){
+		document.getElementById("juhis").innerHTML = "Uue kandidaadi lisamiseks logi sisse";
+		//tuuakse nahtavale konteiner
+		document.getElementById("invite").style.visibility="hidden";
+	}
+	
+}
+
+function createXmlHttpRequestObject(){
+	var xmlHttp;
+	if(window.ActiveXObject){
+		try{
+			xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+		}catch(e){
+			xmlHttp=false;
+		}
+	}else{
+		try{
+			xmlHttp= new XMLHttpRequest();
+		}catch(e){
+			xmlHttp=false;
+		}
+	}
+	
+	if (!xmlHttp){
+		alert("Midagi on halvasti!!");
+	}else{
+		return xmlHttp;
+	}
+	
+}
+ 
+ 
+ 
+ 
+  

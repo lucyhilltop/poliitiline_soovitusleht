@@ -151,8 +151,29 @@ table, th, td {
 
 
 
+#inviteheader {
+    margin:0 auto;
+    width:459px;
+}
+#inviteheader label {
+    display:block;
+    margin-top:20px;
+    letter-spacing:1px;
+	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+}
+
+#inviteheader p1 {
+    display:block;
+    margin-top:20px;
+	margin-bottom:20px;
+    letter-spacing:1px;
+	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+	font-style: bold;
+	font-size: 30px;
+}
 
 #invite {
+	visibility: hidden;
     margin:0 auto;
     width:459px;
 }

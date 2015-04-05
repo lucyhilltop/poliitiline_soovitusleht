@@ -1,7 +1,5 @@
 <?php
 include ("header.php");
-$message="Siin saad lisada lehele juurde kandidaate!!!!";
-
 
 //Validation ei tööta veel
 $nameErr = $numErr = $partyErr = "";
@@ -31,10 +29,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 	
 ?>
-
+<div id="inviteheader">
+	<CENTER>
+	<fb:login-button autologoutlink="true" scope="public_profile,email" data-size="xlarge" 
+	onlogin="checkLoginState();">
+	</fb:login-button>
+	</CENTER>
+	<script src="js/facebook.js"></script>
+	
+	<div id="status">
+	</div>
+	
+	<p1 id="juhis"></p1>
+</div>
 
 <div id="invite">
-    <p1>Siin saad lisada lehele uue kandidaadi</p1>
+
 	<form method="post" action="funktsioonid/invite.php" onsubmit="return validateForm()">
 			
 		<label>Nimi</label>
@@ -53,8 +63,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		<textarea name="kirjeldus" placeholder="Lühike ülevaade kandidaadist"></textarea>
 				
 		<input id="submit" name="submit" type="submit" value="Submit">
-			
+	
 	</form>
+	</div>
+
+	
 </div>
 </div>
 <?php
