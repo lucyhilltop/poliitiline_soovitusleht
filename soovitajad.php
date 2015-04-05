@@ -1,13 +1,8 @@
 ﻿<?php
 include ("header.php");
 include ("funktsioonid/dbfun.php");
-session_start(); 
 ?>
-	<?php
 
-	echo "Kasutaja on " . $_SESSION["kasutaja"] . ".<br>";
-
-?>
 	<form action="#">
             <input id="searchbox" type="text" placeholder="Search..." required>
             <input id="searchbutton" type="submit" value="">
