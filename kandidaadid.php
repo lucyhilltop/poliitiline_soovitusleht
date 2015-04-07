@@ -20,10 +20,9 @@ include ("funktsioonid/dbfun.php");
 			
 			$miturida=0;
 			while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
-				  echo '<div id="osa1"><h2><a" test style="text-decoration:none"
+				  echo '<div id="osa1"><h2><a href="#" test style="text-decoration:none"
 					id='.$row["ID"].'
 					onClick="$kandiID=this.id;getDataKandi($kandiID);
-					href="#"  
 				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></h2></div>';
 				  $miturida++;
 				  
