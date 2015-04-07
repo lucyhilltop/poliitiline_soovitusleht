@@ -23,7 +23,7 @@ include ("funktsioonid/dbfun.php");
 				  echo '<div id="osa1"><h2><a" test style="text-decoration:none"
 					id='.$row["ID"].'
 					onClick="$kandiID=this.id;getDataKandi($kandiID);
-					href="#'$kandiID'"  
+					href="#"  
 				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></h2></div>';
 				  $miturida++;
 				  
