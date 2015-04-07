@@ -23,7 +23,7 @@ include ("funktsioonid/dbfun.php");
 				  echo '<div id="osa1"><h2><a
 					id='.$row["ID"].'
 					onClick="$kandiID=this.id;getDataKandi($kandiID);"
-					ng-href="#/$kandiID" test style="text-decoration:none"
+					ng-href="'$kandiID'" test style="text-decoration:none"
 				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></h2></div>';
 				  $miturida++;
 				  
