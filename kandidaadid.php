@@ -22,8 +22,8 @@ include ("funktsioonid/dbfun.php");
 			while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
 				  echo '<div id="osa1"><h2><a
 					id='.$row["ID"].'
-					onClick="$kandiID=this.id;getDataKandi($kandiID);href="#'.$kandiID.'";"
-					href="#'.$kandiID.'" test style="text-decoration:none"
+					onClick="$kandiID=this.id;getDataKandi($kandiID);"
+					href="#" test style="text-decoration:none"
 				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></h2></div>';
 				  $miturida++;
 				  
