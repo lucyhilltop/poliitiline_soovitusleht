@@ -5,14 +5,17 @@
 
 body {
 	background-color: #FFFFFF;
+	font-family: 'Raleway', sans-serif;
 	
 }
 
 
-#menu-wrapper {
-		height: 90px;
-		background: url(pildid/menu.jpg) no-repeat center top;
-	}
+#footer {
+	margin: 0 auto;
+	padding: 3em 0em 5em 0em;
+	background: #333333;
+}
+
 #nav {
 		height: 80px;
 	}
@@ -36,9 +39,218 @@ body {
 		font-size: 13pt;
 		color: #16576B;
 	}
+	
+	
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+
+#header-wrapper
+	{
+		overflow: hidden;
+		background: #2056ac;
+	}	
+
+#header {
+	/*width: 900px;*/
+	background: #2056AC;
+	text-align: center;
+	height: 200px;
+	
+}
+
+
+	
+/*********************************************************************************/
+/* Menu                                                                        */
+/*********************************************************************************/
+
+#menu-wrapper {
+		height: 90px;
+		
+	}
+	
+	
+#menu
+	{
+	display: inline-block;
+	padding: 0em 2em;
+	text-align: center;
+	padding-top:43px;
+	 
+	}
+	
+	#menu ul
+	{
+		display: inline-block;
+		padding: 0em 2em;
+		text-align: center;
+		float:bottom;
+	}
+	
+	#menu li
+	{
+		display: inline-block;
+	}
+	
+	#menu li a, #menu li span
+	{
+		display: inline-block;
+		padding: 0em 1.5em;
+		text-decoration: none;
+		font-size: 0.90em;
+		font-weight: 600;
+		text-transform: uppercase;
+		line-height: 60px;
+		outline: 0;
+		color: #FFF;
+		transition: all 0.5s ease-in-out 0s;
+	}
+	
+	#menu li:hover a, #menu li.active a, #menu li.active span
+	{
+		background: #FFF;
+		border-radius: 7px 7px 0px 0px;
+		color: #2056ac;
+	}
+	
+
+/*********************************************************************************/
+/* Title                                                                          */
+/*********************************************************************************/
+	
+	#title h1
+	{
+		display: block;
+		margin-top: 1em;
+		margin-bottom: 0.20em;
+		padding: 0.20em 0.9em;
+		font-size: 3.5em;
+	}
+	
+	#title a
+	{
+		text-decoration: none;
+		color: #FFF;
+		position: relative;
+	}
+	
+	#title span
+	{
+		text-transform: uppercase;
+		font-size: 2.90em;
+		color: rgba(255,255,255,1);
+		
+	}
+
+	#title span a
+	{
+		color: rgba(255,255,255,0.8);
+	}
+	
+	#title a:hover 
+	{
+		color: #FFF;
+	}
+
+	#title a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+#title a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*********************************************************************************/
+/* Sisu konteiner                                                                     */
+/*********************************************************************************/
+	
+#konteinerX {
+    width: 1050px;
+	height: 1050px;
+    margin: 0 auto;
+	font-size:16px;
+	background-color:#fff;
+	padding:0px 40px 40px 40px;
+}
+
+
+/*********************************************************************************/
+/* nimekirja konteiner                                                                     */
+/*********************************************************************************/
+	
+#navigation { 
+	width: 210px; 
+	height: 900px;
+	padding: 0em 2em 0 2em; 
+	margin-left: 60px;
+	margin-right: 60px;
+	color: #fff; 
+	background: #1e1b1a; 
+	float: left;
+	opacity:0.8;
+	position:realative;
+	z-index:0;
+	
+	-webkit-box-shadow: 8px 0px 5px 0px rgba(0,0,0,.3);
+	 -moz-box-shadow: 8px 0px 5px 0px rgba(0,0,0,.3);
+	        box-shadow: 8px 0px 5px 0px rgba(0,0,0,.3);	
+
+background: rgb(30,27,26);
+background: -moz-linear-gradient(left,  rgba(30,27,26,1) 0%, rgba(38,35,33,1) 18%, rgba(30,27,26,1) 77%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(30,27,26,1)), color-stop(18%,rgba(38,35,33,1)), color-stop(77%,rgba(30,27,26,1)));
+background: -webkit-linear-gradient(left,  rgba(30,27,26,1) 0%,rgba(38,35,33,1) 18%,rgba(30,27,26,1) 77%);
+background: -o-linear-gradient(left,  rgba(30,27,26,1) 0%,rgba(38,35,33,1) 18%,rgba(30,27,26,1) 77%);
+background: -ms-linear-gradient(left,  rgba(30,27,26,1) 0%,rgba(38,35,33,1) 18%,rgba(30,27,26,1) 77%);
+background: linear-gradient(to right,  rgba(30,27,26,1) 0%,rgba(38,35,33,1) 18%,rgba(30,27,26,1) 77%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1b1a', endColorstr='#1e1b1a',GradientType=1 );
+			
+	}
+
+#navigation .title h2
+	{
+		font-weight: 200;
+		color: #FFF;
+
+	}
+	
+#osa1
+	{
+	float: up;
+	margin: 1ea 0 0 0;
+	height:7ea;
+	}
+	
+#navigation a {
+	color: white ;
+	font-weight:bold ;
+	font-size: 18px;
+
+}	
+#navigation a:hover {
+	color: white ;
+	font-weight:bold ;
+	font-size: 19px;
+}	
 
 
 
+	
+	
+	
 #pais {
 	height: 150px;
 	/*width: 900px;*/
@@ -109,7 +321,7 @@ body {
 }
 
 #populaarsed li {
-	padding-bottom: 40px; 
+	padding-bottom: 10px; 
 	margin: 15px 0px;
 }
 
@@ -118,6 +330,7 @@ body {
 	text-decoration: none;
 	color: #000000;
 }
+
 
 #populaarsed a:hover{
 	color:#04B404;
@@ -147,6 +360,7 @@ body {
 	-moz-border-radius:15px; 
 	-webkit-border-radius:15px;
 	padding: 5px 15px 6px 10px;
+	margin: 15px;
 }
 
 table {

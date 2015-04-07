@@ -2,22 +2,16 @@
 include ("header.php");
 include ("funktsioonid/dbfun.php");
 ?>
+	
+	<div id="navigation">
 	<form action="#">
             <input id="searchbox" type="text" placeholder="Search..." required>
             <input id="searchbutton" type="submit" value="">
 	</form>
 	
-	<table id="soovitajad">
-		<thead>
-			<tr>
-				<th>Kandidaadid</th>
-			</tr>
-		</thead>
-		<tbody>
+
 		
-		<?php
-			$type ="kandidaadid";
-		
+		<?php		
 			$conn = connect();
 			$sql = "SELECT * FROM Kandidaadid";
 			$stmt=sqlsrv_query($conn, $sql);
@@ -26,10 +20,10 @@ include ("funktsioonid/dbfun.php");
 			
 			$miturida=0;
 			while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
-				  echo '<tr><td><a href="#" class="button"
+				  echo '<div id="osa1"><h2><a href="#" style="text-decoration:none"
 					id='.$row["ID"].'
 					onClick="$kandiID=this.id;getDataKandi($kandiID);"  
-				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></td></tr>';
+				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></h2></div>';
 				  $miturida++;
 				  
 			}
@@ -41,8 +35,9 @@ include ("funktsioonid/dbfun.php");
 			
 		?>
 
-		</tbody>
-	</table>
+
+	</div>
+	
 	
 	<div id="fb">
 		<fb:login-button autologoutlink="true" scope="public_profile,email" data-size="medium" 

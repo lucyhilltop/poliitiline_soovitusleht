@@ -4,7 +4,9 @@ include ("funktsioonid/dbfun.php");
 ?>
 
 	<div id= "populaarsed">
-		<h1> Populaarseimad kandidaadid:</h1>
+
+		<h2> Populaarseimad kandidaadid:</h1>
+
 			<ol>
 			<?php
 				$top=getTop();
