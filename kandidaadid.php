@@ -4,13 +4,7 @@ include ("funktsioonid/dbfun.php");
 ?>
 	
 	<div id="navigation">
-	<form action="#">
-            <input id="searchbox" type="text" placeholder="Search..." required>
-            <input id="searchbutton" type="submit" value="">
-	</form>
-	
 
-		
 		<?php		
 			$conn = connect();
 			$sql = "SELECT * FROM Kandidaadid";
@@ -41,6 +35,7 @@ include ("funktsioonid/dbfun.php");
 	</div>
 	
 	
+	
 	<div id="fb">
 		<fb:login-button autologoutlink="true" scope="public_profile,email" data-size="medium" 
 		onlogin="checkLoginState();">
@@ -48,13 +43,10 @@ include ("funktsioonid/dbfun.php");
 
 		<script src="js/facebook.js"></script>
 		
-		<div id="status">
-		</div>
-	
-	</div>
-	
 
 	
+	</div>
+		
 	<div id="nurkkonteiner">
 		<h1 id="KNimi">Nimi</h1>
 		<h2 id="KNumber">Number</h2>
@@ -77,6 +69,8 @@ include ("funktsioonid/dbfun.php");
 		<input type="hidden" value="z" id="KandiID"/>
 		
 	</div>
+	
+	
 	
 	
 	</div>
