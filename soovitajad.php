@@ -2,19 +2,9 @@
 include ("header.php");
 include ("funktsioonid/dbfun.php");
 ?>
-
-	<form action="#">
-            <input id="searchbox" type="text" placeholder="Search..." required>
-            <input id="searchbutton" type="submit" value="">
-	</form>
 	
-	<table id="soovitajad">
-		<thead>
-			<tr>
-				<th>Soovitajad</th>
-			</tr>
-		</thead>
-		<tbody>
+	<div id="navigation">
+	
 		<?php
 		
 			$conn = connect();
@@ -23,10 +13,10 @@ include ("funktsioonid/dbfun.php");
 			
 			$miturida=0;
 			while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
-				  echo '<tr><td><a href="#" class="button"
+				  echo '<div id="osa1"><h2><a href="#" style="text-decoration:none"
 					id='.$row["ID"].'
 					onClick="getDataSoov(this.id)"  
-				  >'.$row['nimi'].'</a></td></tr>';
+				  >'.$row['nimi'].'</a></h2></div>';
 				  $miturida++;
 			}
 			//kui on vähe liikmeid, siis kuvatakse tyhju kaste. Lihtsalt visuaalne asi.
@@ -35,8 +25,8 @@ include ("funktsioonid/dbfun.php");
 				$miturida++;
 			}
 		?>
-		</tbody>
-	</table>
+	</div>
+
 	
 	<div id="fb">
 		<fb:login-button autologoutlink="true" scope="public_profile,email" data-size="medium" 
@@ -45,8 +35,7 @@ include ("funktsioonid/dbfun.php");
 
 		<script src="js/facebook.js"></script>
 		
-		<div id="status">
-		</div>
+		
 	
 	</div>
 	

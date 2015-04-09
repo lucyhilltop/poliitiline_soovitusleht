@@ -6,6 +6,8 @@
 body {
 	background-color: #FFFFFF;
 	font-family: 'Raleway', sans-serif;
+	margin: -20px;
+	
 	
 }
 
@@ -198,11 +200,12 @@ body {
 	padding: 0em 2em 0 2em; 
 	margin-left: 60px;
 	margin-right: 60px;
+	margin-top: -32px;
 	color: #fff; 
 	background: #1e1b1a; 
 	float: left;
 	opacity:0.8;
-	position:realative;
+	position:relative;
 	z-index:0;
 	
 	-webkit-box-shadow: 8px 0px 5px 0px rgba(0,0,0,.3);
@@ -532,9 +535,11 @@ table, th, td {
 #fb{
 	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
 	letter-spacing:1px;
-	position:relative;
+	position:absolute;
 	float:right;
 	padding:1em 2em;
+	top: 190px;
+    right: 10px;
 }
 
 
