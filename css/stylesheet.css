@@ -543,9 +543,7 @@ table, th, td {
 }
 
 .fb-send, fb\:send {
-	data-width="162";
-	data-height="52"; 
-	data-colorscheme="dark";
+	transform: scale(1.3);
 }
 
 
