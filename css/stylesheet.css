@@ -542,6 +542,10 @@ table, th, td {
     right: 10px;
 }
 
+.fb-send, fb\:send {
+  transform: scale(2.5);
+}
+
 
 
 
