@@ -1,6 +1,9 @@
 <?php
 include ("header.php");
 ?>
+
+<center> Kutsuge oma sõbrad ka kandidaate soovitama!
+<br>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -10,3 +13,4 @@ include ("header.php");
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class="fb-send" data-href="http://valimissoovitus.azurewebsites.net/" data-colorscheme="dark" data-width="165" data-height="100"></div>
+</center>
