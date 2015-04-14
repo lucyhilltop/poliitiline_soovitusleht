@@ -25,7 +25,7 @@
 			<li><a href="kandidaadid.php" class="button">Kandidaadid</a></li>
 			<li><a href="kutse.php" class="button">Lisa kandidaat</a></li>
 			<li><a href="minukandidaadid.php" class="button">Minu seaded</a></li>
-			<li><a href="kutse.php" class="button">Kutse</a></li>
+			<li><a href="invite.php" class="button">Kutse</a></li>
 		</div>
     </div>
 	</div>
