@@ -30,13 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 ?>
 <div id="inviteheader">
-	<CENTER>
-	<fb:login-button autologoutlink="true" scope="public_profile,email" data-size="xlarge" 
-	onlogin="checkLoginState();">
-	</fb:login-button>
-	</CENTER>
-	<script src="js/facebook.js"></script>
-	
+
 	<div id="status">
 	</div>
 	
@@ -53,6 +47,16 @@ if (isset($_POST["FBID"])=== true && empty($_POST["FBID"])=== false) {
 
 
 ?>
+<div id="fb">
+		<fb:login-button autologoutlink="true" scope="public_profile,email" data-size="medium" 
+		onlogin="checkLoginState();">
+		</fb:login-button>
+
+		<script src="js/facebook.js"></script>
+		
+
+	
+	</div>
 
 <div id="invite">
 
