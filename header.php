@@ -23,7 +23,7 @@
 			<li><a href="index.php" class="button">Avaleht</a></li>
 			<li><a href="soovitajad.php" class="button">Soovitajad</a></li>
 			<li><a href="kandidaadid.php" class="button">Kandidaadid</a></li>
-			<li><a href="kutse.php" class="button">Kandidaadi lisamine</a></li>
+			<li><a href="kutse.php" class="button">Lisa kandidaat</a></li>
 			<li><a href="minukandidaadid.php" class="button">Minu seaded</a></li>
 		</div>
     </div>
