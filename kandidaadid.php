@@ -18,7 +18,7 @@ include ("funktsioonid/dbfun.php");
 					id='.$row["ID"].'
 					onClick="$kandiID=this.id;getDataKandi($kandiID);"
 					test style="text-decoration:none"
-					href="this.id"
+					href="javascript:;"
 				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></h2></div>';
 				  $miturida++;
 				  
