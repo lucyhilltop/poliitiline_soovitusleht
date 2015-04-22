@@ -21,6 +21,7 @@ include ("funktsioonid/dbfun.php");
 					href="#"
 				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></h2></div>';
 				  $miturida++;
+				  history.pushState({},"URL Rewrite Example","http://valimissoovitus.azurewebsites.net/kandidaadid.php/$kandiID")
 				  
 			}
 			//kui on vähe liikmeid, siis kuvatakse tyhju kaste. Lihtsalt visuaalne asi.
