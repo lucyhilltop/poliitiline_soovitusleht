@@ -18,7 +18,7 @@ include ("funktsioonid/dbfun.php");
 					id='.$row["ID"].'
 					onClick="$kandiID=this.id;getDataKandi($kandiID);"
 					test style="text-decoration:none"
-					href="javascript:;this.id"
+					location.href="http://valimissoovitus.azurewebsites.net/kandidaadid.php/$kandiID"
 				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></h2></div>';
 				  $miturida++;
 				  
