@@ -19,7 +19,6 @@ include ("funktsioonid/dbfun.php");
 					onClick="$kandiID=this.id;getDataKandi($kandiID);"
 					test style="text-decoration:none"
 					href="#"
-					window.history.pushState(“”, “Kandidaadid”, “/this.id”);
 				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></h2></div>';
 				  $miturida++;
 				  
