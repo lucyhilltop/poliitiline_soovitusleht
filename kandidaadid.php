@@ -16,9 +16,9 @@ include ("funktsioonid/dbfun.php");
 			while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
 				  echo '<div id="osa1"><h2><a
 					id='.$row["ID"].'
-					onClick="$kandiID=this.id;getDataKandi($kandiID);location.href='http://valimissoovitus.azurewebsites.net/kandidaadid.php/$kandiID';"
+					onClick="$kandiID=this.id;getDataKandi($kandiID);"
 					test style="text-decoration:none"
-					
+					href="#$kandiID"
 				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></h2></div>';
 				  $miturida++;
 				  
