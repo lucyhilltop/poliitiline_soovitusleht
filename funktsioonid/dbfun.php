@@ -55,7 +55,10 @@ function getcount() {
 	$sql = "SELECT COUNT(*) FROM Kandidaadid";
 	$stmt= sqlsrv_query($conn, $sql);
 	$arv = sqlsrv_num_rows($stmt);
-	echo "$arv";
+	if ($row_count === false)
+   echo "Error in retrieveing row count.";
+else
+   echo $row_count;
 }
 //int mysql_num_rows ( resource $result )
 
