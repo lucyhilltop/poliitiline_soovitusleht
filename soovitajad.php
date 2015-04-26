@@ -33,6 +33,8 @@ include ("funktsioonid/dbfun.php");
                    onClick="trellid()">
                    '.$kolm.'</a></h2></div>';
             $kolm--;
+
+            
 }
 		?>
 
