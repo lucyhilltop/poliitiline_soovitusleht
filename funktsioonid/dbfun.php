@@ -52,7 +52,7 @@ function getAll($table)
 //REFRESHI FUNKTSIOON
 function getcount() {
 	$conn = connect();
-	$sql = "SELECT COUNT(*) FROM Kandidaadid";
+	$sql = "SELECT * FROM Kandidaadid";
 	$stmt= sqlsrv_query($conn, $sql);
 	$arv = sqlsrv_num_rows($stmt);
 	if ($arv === false)
