@@ -53,8 +53,8 @@ function getAll($table)
 function getcount() {
 	$conn = connect();
 	$sql = "SELECT COUNT(*) FROM Kandidaadid";
-	$stmt=sqlsrv_query($conn, $sql);
-	$arv = mysql_num_rows($stmt);
+	$stmt= sqlsrv_query($conn, $sql);
+	$arv = sqlsrv_num_rows($stmt);
 	echo "$arv";
 }
 //int mysql_num_rows ( resource $result )
