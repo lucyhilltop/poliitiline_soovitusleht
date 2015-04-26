@@ -16,8 +16,7 @@ include ("funktsioonid/dbfun.php");
 				  echo '<div id="osa1">
                         <h2><a href="#' . $row["ID"] . '" style="text-decoration:none"
 					id='.$row["ID"].'
-					onClick="trellid()
-					getDataSoov(this.id)"
+					onClick="getDataSoov(this.id)"
 				  >'.$row['nimi'].'</a></h2></div>';
 				  $miturida++;
 			}
