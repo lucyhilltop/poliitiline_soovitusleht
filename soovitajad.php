@@ -28,13 +28,13 @@ include ("funktsioonid/dbfun.php");
             $kolm = 3;
         while($kolm > 0){
             echo '<div id="osa1"
-                   <h2><a href="#.$kolm." style="text-decoration:none"
-                   id=".$kolm."
+                   <h2><a href="#' . $kolm . '" style="text-decoration:none"
+                   id="' . $kolm . '"
                    onClick="trellid()">
                    '.$kolm.'</a></h2></div>';
             $kolm--;
 
-            
+
 }
 		?>
 
