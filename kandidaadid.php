@@ -6,11 +6,6 @@ include ("funktsioonid/dbfun.php");
 	<div id="navigation">
 
 		<?php	
-			function setInterval($f, $milliseconds)	{
-				 $seconds=(int)$milliseconds/1000;
-    				while(true) {
-					 $f();
-        				sleep($seconds);}}
 			$conn = connect();
 			$sql = "SELECT * FROM Kandidaadid";
 			$stmt=sqlsrv_query($conn, $sql);
