@@ -59,14 +59,14 @@ function getcount() {
 }
 //int mysql_num_rows ( resource $result )
 
-//function setInterval($f, $milliseconds) {
-  //  $seconds=(int)$milliseconds/1000;
-    //while(true)
-    //{
-      //  echo $f;
-        //sleep($seconds);
-    //}
-//}
+function setInterval($f, $milliseconds) {
+    $seconds=(int)$milliseconds/1000;
+    while(true)
+    {
+        echo $f;
+        sleep($seconds);
+    }
+}
  //votab koik info kandidaadaadi kohta
 function getOneKandi($id)
 {
