@@ -88,7 +88,7 @@ body {
 		display: inline-block;
 		padding: 0em 2em;
 		text-align: center;
-		float: bottom;
+		/*float: bottom;*/
 	}
 	
 	#menu li
