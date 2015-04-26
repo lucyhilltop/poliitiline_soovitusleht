@@ -1,5 +1,4 @@
 <?php
-include ("header.php");
 
 //Validation ei tööta veel
 $nameErr = $numErr = $partyErr = "";
@@ -27,39 +26,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $erakond = $_POST["erakond"];
     }
 }
-	
-?>
-<div id="inviteheader">
 
+include ("header.php");
+?>
+
+<div id="inviteheader">
 	<div id="status">
 	</div>
-	
-	<p1 id="juhis"></p1>
+	<h2 id="juhis"></h2>
 </div>
-<?php
 
-	
+<?php
 if (isset($_POST["FBID"])=== true && empty($_POST["FBID"])=== false) {
 	echo $_POST["FBID"];
-	
 }
-
-
-
 ?>
+
 <div id="fb">
-		<fb:login-button autologoutlink="true" scope="public_profile,email" data-size="medium" 
-		onlogin="checkLoginState();">
-		</fb:login-button>
-
-		<script src="js/facebook.js"></script>
-		
-
-	
-	</div>
+    <fb:login-button autologoutlink="true" scope="public_profile,email" data-size="medium"
+    onlogin="checkLoginState();">
+    </fb:login-button>
+    <script src="js/facebook.js"></script>
+</div>
 
 <div id="invite">
-
 	<form method="post" action="funktsioonid/invitedb.php" onsubmit="return validateForm()">
 			
 		<label>Nimi</label>
@@ -83,14 +73,8 @@ if (isset($_POST["FBID"])=== true && empty($_POST["FBID"])=== false) {
 		<input id="submit" name="submit" type="submit" value="Submit">
 	
 	</form>
-	</div>
-
-	
 </div>
-</div>
-<?php
 
-include ("footer.php");
-?>
+<?php include ("footer.php"); ?>
 
 
