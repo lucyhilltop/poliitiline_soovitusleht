@@ -74,9 +74,18 @@ include ("header.php");
 
 </div>
 	
-	<script src="js/jquery-1.11.2.min.js"></script>
-	<script src="js/konteinerism.js"></script>
-	<script src="js/toetus.js"></script>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/konteinerism.js"></script>
+<script src="js/toetus.js"></script>
+
+<script>
+    window.onhashchange = function() {
+        getDataKandi(location.hash.substr(1))
+    };
+
+    window.onhashchange();
+</script>
+
 <?php
 include ("footer.php");
 ?>

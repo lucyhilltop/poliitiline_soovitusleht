@@ -39,7 +39,11 @@ include("header.php");
 <script src="js/konteinerism.js"></script>
 
 <script>
+    window.onhashchange = function() {
+        getDataSoov(location.hash.substr(1))
+    };
 
+    window.onhashchange();
 </script>
 
 <script src="js/facebook.js"></script>
