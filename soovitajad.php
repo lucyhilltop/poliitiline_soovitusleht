@@ -5,30 +5,19 @@ include ("funktsioonid/dbfun.php");
 ?>
 	
 	<div id="navigation">
-        <script type="text/javascript" language="javascript">
+        <script type="text/javascript">
+            $(function() {
 
-            $(function(){
+            //set up hash detection
+            $(window).bind( 'hashchange', function(e) {
+             $hashwith = '';
+             hash = location.hash;
+             if($hashwith != ''){
+             getDataSoov(hash);
+             }
+             });
 
-              // Bind an event to window.onhashchange that, when the hash changes, gets the
-              // hash and adds the class "selected" to any matching nav link.
-              $(window).hashchange( function(){
-                var hash = location.hash;
-
-                // Set the page title based on the hash.
-                document.title = 'The hash is ' + ( hash.replace( /^#/, '' ) || 'blank' ) + '.';
-
-                // Iterate over all nav links, setting the "selected" class as-appropriate.
-                $('#navigation a').each(function(){
-                  var that = $(this);
-                  that[ that.attr( 'href' ) === hash ? 'addClass' : 'removeClass' ]( 'selected' );
-                });
-              })
-
-              // Since the event is only triggered when the hash changes, we need to trigger
-              // the event now, to handle the hash the page may have loaded with.
-              $(window).hashchange();
-
-            });
+             $(window).trigger( 'hashchange' );
     </script>
 		<?php
 		
@@ -39,6 +28,7 @@ include ("funktsioonid/dbfun.php");
             $idee = 0;
 			while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
                 $idee = $row["ID"];
+                $hashwith = '#'. $idee;
 				  echo '<div id="osa1">
                         <h2><a href="#' . $idee . '" style="text-decoration:none"
 					id='.$idee.'
