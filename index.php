@@ -56,4 +56,4 @@ include ("funktsioonid/dbfun.php");
 </div>
 <?php
 include ("footer.php");
-?>
+?><!DOCTYPE HTML>
