@@ -5,20 +5,6 @@ include ("funktsioonid/dbfun.php");
 ?>
 	
 	<div id="navigation">
-        <script type="text/javascript">
-            $(function() {
-
-            //set up hash detection
-            $(window).bind( 'hashchange', function(e) {
-             $hashwith = '';
-             hash = location.hash;
-             if($hashwith != ''){
-             getDataSoov(hash);
-             }
-             });
-
-             $(window).trigger( 'hashchange' );
-    </script>
 		<?php
 		
 			$conn = connect();
@@ -26,6 +12,7 @@ include ("funktsioonid/dbfun.php");
 			$stmt=sqlsrv_query($conn, $sql);
 			$miturida=0;
             $idee = 0;
+            $hashwith = '';
 			while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
                 $idee = $row["ID"];
                 $hashwith = '#'. $idee;
@@ -44,7 +31,16 @@ include ("funktsioonid/dbfun.php");
 				$miturida++;
 }
 		?>
-
+            <script type="text/javascript">
+            $(function() {
+            $(window).bind( 'hashchange', function(e) {
+             hash = location.hash;
+             if($hashwith != ''){
+             getDataSoov(hash);
+             }
+             });
+             $(window).trigger( 'hashchange' );
+    </script>
 	</div>
 
 	
