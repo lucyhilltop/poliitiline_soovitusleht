@@ -80,16 +80,8 @@ body {
 	display: inline-block;
 	padding: 0em 2em;
 	text-align: center;
-	padding-top:43px;
+	padding-top:30px;
 	 
-	}
-	
-	#menu ul
-	{
-		display: inline-block;
-		padding: 0em 2em;
-		text-align: center;
-		/*float: bottom;*/
 	}
 	
 	#menu li
@@ -231,7 +223,7 @@ background: linear-gradient(to right,  rgba(30,27,26,1) 0%,rgba(38,35,33,1) 18%,
 
 	}
 	
-#osa1
+.osa1
 	{
 	/*float: up;*/
 	margin: 5px 0 0 0;
@@ -468,6 +460,11 @@ table, th, td {
     border:none;
     margin-top:20px;
     cursor:pointer;
+}
+
+.fb-center {
+    margin-top: 50px;
+    text-align: center;
 }
 
 #submit:hover {

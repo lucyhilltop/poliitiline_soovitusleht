@@ -28,12 +28,12 @@ function getData(param,url,type) {
 		}
 		
 		xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		xmlHttp.setRequestHeader("Content-length", param.length);
-		xmlHttp.setRequestHeader("Connection", "close");
+		//xmlHttp.setRequestHeader("Content-length", param.length);
+		//xmlHttp.setRequestHeader("Connection", "close");
 
 		xmlHttp.send(param);
 	}else{
-		setTimeout('process()',1000);
+		//setTimeout('process()',1000);
 	}
 }
 
@@ -56,7 +56,7 @@ function handleServerResponseKandi() {
 			//tuuakse nahtavale konteiner
 			document.getElementById("nurkkonteiner").style.visibility="visible"
 			
-			setTimeout('process()',1000);
+			//setTimeout('process()',1000);
 		}else{
 			alert("Midagi laks valesti...");
 		}
@@ -83,7 +83,7 @@ function handleServerResponseSoovit() {
 			//tuuakse nahtavale konteiner
 			document.getElementById("nurkkonteiner").style.visibility="visible"
 			
-			setTimeout('process()',1000);
+			//setTimeout('process()',1000);
 		}else{
 			alert(xmlHttp.status);
 		}
