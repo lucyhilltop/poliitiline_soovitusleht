@@ -22,6 +22,20 @@ function getDataSoov(id) {
 	getData(param,url, "soovitaja")
 }
 
+function trellid(){
+    $(window).hashchange( function trellid(){
+        var hash = location.hash;
+
+        document.title = 'The hash is ' + ( hash.replace( /^#/, '' ) || 'blank' ) + '.';
+
+        $('#osa1 a').each(function trellid(){
+            var that = $(this);
+            that[ that.attr( 'href' ) === hash ? 'addClass' : 'removeClass' ]( 'selected' );
+        });
+    })
+    $(window).hashchange();
+}
+
 function getData(param,url,type) {
 	if (xmlHttp.readyState==0 || xmlHttp.readyState==4){
 
