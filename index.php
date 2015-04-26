@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 ﻿<?php
 include ("header.php");
 include ("funktsioonid/dbfun.php");
@@ -56,4 +57,4 @@ include ("funktsioonid/dbfun.php");
 </div>
 <?php
 include ("footer.php");
-?><!DOCTYPE HTML>
+?>
