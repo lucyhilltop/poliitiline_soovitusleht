@@ -7,7 +7,9 @@ include ("funktsioonid/dbfun.php");
 
 		<?php	
 			tabelitaide();
-			setInterval(getcount(), 5000);
+			setInterval(function(){
+    echo "hi!\n";
+}, 1000);
 			
 		?>
 
