@@ -5,38 +5,18 @@ include ("funktsioonid/dbfun.php");
 ?>
 	
 	<div id="navigation">
-	$(function(){
-
-  // Bind an event to window.onhashchange that, when the hash changes, gets the
-  // hash and adds the class "selected" to any matching nav link.
-  $(window).hashchange( function(){
-    var hash = location.hash;
-
-    // Set the page title based on the hash.
-    document.title = 'The hash is ' + ( hash.replace( /^#/, '' ) || 'blank' ) + '.';
-
-    // Iterate over all nav links, setting the "selected" class as-appropriate.
-    $('#nav a').each(function(){
-      var that = $(this);
-      that[ that.attr( 'href' ) === hash ? 'addClass' : 'removeClass' ]( 'selected' );
-    });
-  })
-
-  // Since the event is only triggered when the hash changes, we need to trigger
-  // the event now, to handle the hash the page may have loaded with.
-  $(window).hashchange();
-
-});
 		<?php
 		
 			$conn = connect();
 			$sql = "SELECT * FROM Soovitajad";
 			$stmt=sqlsrv_query($conn, $sql);
 			$miturida=0;
+            $idee = 0;
 			while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
+                $idee = $row["ID"];
 				  echo '<div id="osa1">
-                        <h2><a href="#' . $row["ID"] . '" style="text-decoration:none"
-					id='.$row["ID"].'
+                        <h2><a href="#' . $idee . '" style="text-decoration:none"
+					id='.$idee.'
 					onClick="getDataSoov(this.id)"
 				  >'.$row['nimi'].'</a></h2></div>';
 				  $miturida++;
