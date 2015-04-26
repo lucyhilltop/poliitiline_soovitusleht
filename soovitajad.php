@@ -32,15 +32,15 @@ include ("funktsioonid/dbfun.php");
 }
 		?>
             <script type="text/javascript">
-            $(function() {
-            $(window).bind( 'hashchange', function(e) {
-             hash = location.hash;
-             if($hashwith != ''){
-             getDataSoov(9);
-             }
-             });
-             $(window).trigger( 'hashchange' );
-    </script>
+                $(function() {
+                $(window).bind( 'hashchange', function(e) {
+                 hash = location.hash;
+                 if(3 != 2){
+                 getDataSoov(9);
+                 }
+                 });
+                 $(window).trigger( 'hashchange' );
+            </script>
 	</div>
 
 	
