@@ -27,12 +27,8 @@ include ("funktsioonid/dbfun.php");
 			while($miturida<13){
 				echo '<tr><td><a href="kandidaadid.php" class="button"></a></td></tr>';
 				$miturida++;
-
-
-
 }
 		?>
-
 	</div>
 
 	
