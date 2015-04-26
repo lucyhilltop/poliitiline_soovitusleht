@@ -33,6 +33,7 @@ function trellid(){
             that[ that.attr( 'href' ) === hash ? 'addClass' : 'removeClass' ]( 'selected' );
         });
     })
+    $(window).hashchange();
 }
 
 function getData(param,url,type) {

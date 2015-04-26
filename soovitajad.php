@@ -26,13 +26,14 @@ include ("funktsioonid/dbfun.php");
 				$miturida++;
 			}*/
             $kolm = 3;
-while($kolm > 0){
-    echo '<div id="osa1"
-                    <h2><a href="#" style="text-decoration:none"
-                    id='.$kolm.'
-                    onClick="$(window).hashchange();">
-                    '.$kolm.'</a></h2></div>';
-    $kolm--;
+        while($kolm > 0){
+            $trellid = "#" . "$kolm";
+            echo '<div id="osa1"
+                   <h2><a href="$trellid" style="text-decoration:none"
+                   id=".$kolm."
+                   onClick="trellid()">
+                   '.$kolm.'</a></h2></div>';
+            $kolm--;
 }
 		?>
 
@@ -64,10 +65,6 @@ while($kolm > 0){
 		
 	</div>
 
-	
-	
-	
-</div>
 <?php
 include ("footer.php");
 ?>
