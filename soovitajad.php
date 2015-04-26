@@ -16,9 +16,9 @@ include ("funktsioonid/dbfun.php");
 
                 // Set the page title based on the hash.
                 document.title = 'The hash is ' + ( hash.replace( /^#/, '' ) || 'blank' ) + '.';
-                
+
                 // Iterate over all nav links, setting the "selected" class as-appropriate.
-                $('#osa1 a').each(function(){
+                $('#navigation a').each(function(){
                   var that = $(this);
                   that[ that.attr( 'href' ) === hash ? 'addClass' : 'removeClass' ]( 'selected' );
                 });
@@ -29,14 +29,6 @@ include ("funktsioonid/dbfun.php");
               $(window).hashchange();
 
             });
-
-            $(function(){
-
-              // Syntax highlighter.
-              SyntaxHighlighter.highlight();
-
-            });
-
     </script>
 		<?php
 		
