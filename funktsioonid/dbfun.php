@@ -54,8 +54,10 @@ function getcount(){
 	$conn = connect();
 	$sql = "SELECT COUNT(*) FROM Kandidaadid";
 	$stmt=sqlsrv_query($conn, $sql);
-	echo ($stmt);
+	$arv = mysql_num_rows($stmt);
+	echo "$arv";
 }
+int mysql_num_rows ( resource $result )
 
 function setInterval($f, $milliseconds)
 {
