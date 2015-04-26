@@ -54,7 +54,7 @@ function getcount(){
 	$conn = connect();
 	$sql = "SELECT COUNT(*) FROM Kandidaadid";
 	$stmt=sqlsrv_query($conn, $sql);
-	return $stmt;
+	echo ($stmt);
 }
 
 function setInterval($f, $milliseconds)
