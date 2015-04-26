@@ -49,7 +49,7 @@ function getAll($table)
 
 
 }
-REFRESHI FUNKTSIOON
+//REFRESHI FUNKTSIOON
 function getcount() {
 	$conn = connect();
 	$sql = "SELECT COUNT(*) FROM Kandidaadid";
