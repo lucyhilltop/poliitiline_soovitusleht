@@ -35,7 +35,10 @@ include ("funktsioonid/dbfun.php");
                 $(function() {
                 $(window).bind( 'hashchange', function(e) {
                  hash = location.hash;
-                 if(3 != 2){ 
+                 if(3 != 2){
+
+
+                 
                  getDataSoov(9);
                  }
                  });
