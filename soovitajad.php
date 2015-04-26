@@ -16,11 +16,11 @@ include ("funktsioonid/dbfun.php");
 				  echo '<div id="osa1">
                         <h2><a href="#' . $row["ID"] . '" style="text-decoration:none"
 					id='.$row["ID"].'
-					onClick="getDataSoov(this.id)
-										trellid()"
+					onClick="getDataSoov(this.id)"
 				  >'.$row['nimi'].'</a></h2></div>';
 				  $miturida++;
 			}
+            trellid();
 			//kui on vähe liikmeid, siis kuvatakse tyhju kaste. Lihtsalt visuaalne asi.
 			while($miturida<13){
 				echo '<tr><td><a href="kandidaadid.php" class="button"></a></td></tr>';
