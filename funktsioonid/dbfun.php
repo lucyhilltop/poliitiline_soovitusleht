@@ -14,6 +14,32 @@ function connect()
     }
     return $conn;
 }
+
+function tabelitaide(){
+	$conn = connect();
+			$sql = "SELECT * FROM Kandidaadid";
+			$stmt=sqlsrv_query($conn, $sql);
+			
+			$kandiID=0;
+			
+			$miturida=0;
+			while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
+				  echo '<div id="osa1"><h2><a
+					id='.$row["ID"].'
+					onClick="$kandiID=this.id;getDataKandi($kandiID);"
+					test style="text-decoration:none"
+					href="#"
+				  >'."nr"." ".$row['number']."  ".$row['nimi'].'</a></h2></div>';
+				  $miturida++;
+				  //history.pushState({},"URL Rewrite Example","http://valimissoovitus.azurewebsites.net/kandidaadid.php/$kandiID")
+				  
+			}
+			//kui on vähe liikmeid, siis kuvatakse tyhju kaste. Lihtsalt visuaalne asi.
+			while($miturida<13){
+				echo '<tr><td><a href="kandidaadid.php" class="button"></a></td></tr>';
+				$miturida++;
+			}
+}
 // eitoota korralikult
 function getAll($table)
 {
@@ -22,6 +48,16 @@ function getAll($table)
     return $stmt =sqlsrv_query($conn, $sql);
 
 
+}
+//REFRESHI FUNKTSIOON
+function setInterval($f, $milliseconds)
+{
+    $seconds=(int)$milliseconds/1000;
+    while(true)
+    {
+        $f();
+        sleep($seconds);
+    }
 }
 // votab koik info kandidaadaadi kohta
 function getOneKandi($id)
