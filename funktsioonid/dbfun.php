@@ -50,24 +50,24 @@ function getAll($table)
 
 }
 //REFRESHI FUNKTSIOON
-function getcount(){
-	$conn = connect();
-	$sql = "SELECT COUNT(*) FROM Kandidaadid";
-	$stmt=sqlsrv_query($conn, $sql);
-	$arv = mysql_num_rows($stmt);
-	echo "$arv";
-}
-int mysql_num_rows ( resource $result )
+//function getcount(){
+//	$conn = connect();
+//	$sql = "SELECT COUNT(*) FROM Kandidaadid";
+//	$stmt=sqlsrv_query($conn, $sql);
+//	$arv = mysql_num_rows($stmt);
+//	echo "$arv";
+//}
+//int mysql_num_rows ( resource $result )
 
-function setInterval($f, $milliseconds)
-{
-    $seconds=(int)$milliseconds/1000;
-    while(true)
-    {
-        echo $f;
-        sleep($seconds);
-    }
-}
+//function setInterval($f, $milliseconds)
+//{
+//    $seconds=(int)$milliseconds/1000;
+//    while(true)
+ //   {
+ //       echo $f;
+ //       sleep($seconds);
+ //   }
+//}
 // votab koik info kandidaadaadi kohta
 function getOneKandi($id)
 {
