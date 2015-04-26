@@ -460,8 +460,8 @@ table, th, td {
 }
 
 #invite submit {
-	height: _the_image_height;
-    width: _the_image_width;
+	height: 53px;
+    width: 203px;
     background:url('pildid/submit.jpg' );
     text-indent:-9999px;
     border:none;
