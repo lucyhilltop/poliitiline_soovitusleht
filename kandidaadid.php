@@ -6,7 +6,6 @@ include ("funktsioonid/dbfun.php");
 	<div id="navigation">
 
 		<?php	
-			tabelitaide();
 			setInterval(tabelitaide(), 1000);
 			
 		?>
