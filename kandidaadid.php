@@ -6,8 +6,8 @@ include ("funktsioonid/dbfun.php");
 	<div id="navigation">
 
 		<?php	
-			getcount();
 			tabelitaide();
+			getcount();
 			
 		?>
 
