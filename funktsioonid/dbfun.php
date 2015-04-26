@@ -50,12 +50,19 @@ function getAll($table)
 
 }
 //REFRESHI FUNKTSIOON
+function getcount(){
+	$conn = connect();
+	$sql = "SELECT COUNT(*) FROM Kandidaadid";
+	$stmt=sqlsrv_query($conn, $sql);
+	return $stmt;
+}
+
 function setInterval($f, $milliseconds)
 {
     $seconds=(int)$milliseconds/1000;
     while(true)
     {
-        $f();
+        echo $f;
         sleep($seconds);
     }
 }
