@@ -1,15 +1,16 @@
 ﻿<?php
 include ("header.php");
 include ("funktsioonid/dbfun.php");
+
 ?>
 	
 	<div id="navigation">
 	
 		<?php
 		
-			$conn = connect();
+			/*$conn = connect();
 			$sql = "SELECT * FROM Soovitajad";
-			$stmt=sqlsrv_query($conn, $sql);
+			$stmt=sqlsrv_query($conn, $sql);'
 			
 			$miturida=0;
 			while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
@@ -23,8 +24,18 @@ include ("funktsioonid/dbfun.php");
 			while($miturida<13){
 				echo '<tr><td><a href="kandidaadid.php" class="button"></a></td></tr>';
 				$miturida++;
-			}
+			}*/
+            $kolm = 3;
+while($kolm > 0){
+    echo '<div id="osa1"
+                    <h2><a href="#" style="text-decoration:none"
+                    id='.$kolm.'
+                    onClick="$(window).hashchange();">
+                    '.$kolm.'</a></h2></div>';
+    $kolm--;
+}
 		?>
+
 	</div>
 
 	
