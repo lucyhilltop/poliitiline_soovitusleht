@@ -8,15 +8,15 @@ include ("funktsioonid/dbfun.php");
 	
 		<?php
 		
-			/*$conn = connect();
+			$conn = connect();
 			$sql = "SELECT * FROM Soovitajad";
-			$stmt=sqlsrv_query($conn, $sql);'
-			
+			$stmt=sqlsrv_query($conn, $sql);
 			$miturida=0;
 			while($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC) ) {
-				  echo '<div id="osa1"><h2><a href="#" style="text-decoration:none"
+				  echo '<div id="osa1">
+                        <h2><a href="#' . $row["ID"] . '" style="text-decoration:none"
 					id='.$row["ID"].'
-					onClick="getDataSoov(this.id)"  
+					onClick="trellid();getDataSoov(this.id)"
 				  >'.$row['nimi'].'</a></h2></div>';
 				  $miturida++;
 			}
@@ -24,15 +24,14 @@ include ("funktsioonid/dbfun.php");
 			while($miturida<13){
 				echo '<tr><td><a href="kandidaadid.php" class="button"></a></td></tr>';
 				$miturida++;
-			}*/
-            $kolm = 3;
+            /*$kolm = 3;
         while($kolm > 0){
             echo '<div id="osa1"
                    <h2><a href="#' . $kolm . '" style="text-decoration:none"
                    id="' . $kolm . '"
                    onClick="trellid()">
                    '.$kolm.'</a></h2></div>';
-            $kolm--;
+            $kolm--;*/
 
 
 }
