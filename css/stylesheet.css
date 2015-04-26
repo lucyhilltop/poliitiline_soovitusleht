@@ -219,7 +219,7 @@ background: -webkit-linear-gradient(left,  rgba(30,27,26,1) 0%,rgba(38,35,33,1) 
 background: -o-linear-gradient(left,  rgba(30,27,26,1) 0%,rgba(38,35,33,1) 18%,rgba(30,27,26,1) 77%);
 background: -ms-linear-gradient(left,  rgba(30,27,26,1) 0%,rgba(38,35,33,1) 18%,rgba(30,27,26,1) 77%);
 background: linear-gradient(to right,  rgba(30,27,26,1) 0%,rgba(38,35,33,1) 18%,rgba(30,27,26,1) 77%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1b1a', endColorstr='#1e1b1a',GradientType=1 );
+/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1b1a', endColorstr='#1e1b1a',GradientType=1 );*/
 			
 	}
 
