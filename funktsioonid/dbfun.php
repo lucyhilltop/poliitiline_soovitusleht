@@ -62,7 +62,6 @@ if ($row_count === false)
    echo "Error in retrieveing row count.";
 else
    echo $row_count;
-   $("div").empty();
 }
 //int mysql_num_rows ( resource $result )
 
