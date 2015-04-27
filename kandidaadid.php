@@ -32,7 +32,9 @@ include ("header.php");
 </div>
 <script>
 	setInterval(function(){
-    alert("TEADE")
+		var a = <?getcount?>;
+    alert("TEADE");
+    alert(a);
 }, 2000);
 
 </script>
