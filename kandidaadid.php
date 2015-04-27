@@ -31,7 +31,7 @@ include ("header.php");
     <?php endforeach; ?>
 </div>
 <script>
-	
+	setInterval(handleServerResponseKandi(),3000);
 
 </script>
 	
