@@ -31,9 +31,7 @@ function getAll($table)
 function getcount() {
 	$conn = connect();
 	$sql = "SELECT * FROM Kandidaadid";
-	$params = array();
-	$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
-	$stmt = sqlsrv_query( $conn, $sql , $params, $options );
+	$stmt = sqlsrv_query( $conn, $sql);
 	$row_count = sqlsrv_num_rows( $stmt );
    
 if ($row_count === false)
@@ -41,7 +39,6 @@ if ($row_count === false)
 else
    echo $row_count;
 }
-//int mysql_num_rows ( resource $result )
 
 function setInterval($f, $milliseconds) {
     $seconds=(int)$milliseconds/1000;
