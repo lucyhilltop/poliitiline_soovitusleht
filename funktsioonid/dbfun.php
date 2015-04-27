@@ -42,14 +42,6 @@ else
    echo $row_count;
 }
 
-function setInterval($f, $milliseconds) {
-    $seconds=(int)$milliseconds/1000;
-    while(true)
-    {
-        alert("MUUTUS");
-        sleep($seconds);
-    }
-}
  //votab koik info kandidaadaadi kohta
 function getOneKandi($id)
 {
