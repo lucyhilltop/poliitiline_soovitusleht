@@ -38,6 +38,9 @@ include ("header.php");
 			alert("UUS KANDIDAAT LISATUD");
 			a=b;
 		}
+		else {
+			alert("MUUTUSI POLE");
+		}
 }, 2000);
 
 </script>
