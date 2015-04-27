@@ -31,16 +31,15 @@ function getAll($table)
 function getcount() {
 	$conn = connect();
 	$sql = "SELECT * FROM Kandidaadid";
-	$params = array();
-	$options =  array( "Scrollable" => SQLSRV_CURSOR_STATIC );
-	$stmt = sqlsrv_query( $conn, $sql , $params, $options );
-	$row_count = sqlsrv_num_rows( $stmt );
-	//$stmt->closeCursor();
-   
-if ($row_count === false)
-   echo "Error in retrieveing row count.";
-else
-   echo $row_count;
+	$params = array("updated data", 1);
+	$stmt = sqlsrv_query( $conn, $sql, $params);
+	$rows_affected = sqlsrv_rows_affected( $stmt);
+if( $rows_affected === false) {
+     die( print_r( sqlsrv_errors(), true));
+} elseif( $rows_affected == -1) {
+      echo "No information available.<br />";
+} else {
+      echo $rows_affected." rows were updated.<br />";
 }
 
  //votab koik info kandidaadaadi kohta
