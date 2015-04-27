@@ -32,8 +32,9 @@ include ("header.php");
 </div>
 <script>
 while (true) {
-	sleep(3);
-	alert("kaka");
+	setTimeout(function(){
+    alert("TEADE")
+}, 2000);
 }
 
 </script>
