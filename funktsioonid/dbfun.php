@@ -32,7 +32,7 @@ function getcount() {
 	$conn = connect();
 	$sql = "SELECT * FROM Kandidaadid";
 	$params = array();
-	$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+	$options =  array( "Scrollable" => SQLSRV_CURSOR_DYNAMIC );
 	$stmt = sqlsrv_query( $conn, $sql , $params, $options );
 	$row_count = sqlsrv_num_rows( $stmt );
    
