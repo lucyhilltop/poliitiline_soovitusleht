@@ -31,8 +31,7 @@ function getAll($table)
 function getcount() {
 	$conn = connect();
 	$sql = "SELECT * FROM Kandidaadid";
-	$params = array("updated data", 1);
-	$stmt = sqlsrv_query( $conn, $sql, $params);
+	$stmt = sqlsrv_query( $conn, $sql);
 	$rows_affected = sqlsrv_rows_affected( $stmt);
 if( $rows_affected === false) {
      die( print_r( sqlsrv_errors(), true));
