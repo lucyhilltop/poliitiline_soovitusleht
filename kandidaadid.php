@@ -31,7 +31,10 @@ include ("header.php");
     <?php endforeach; ?>
 </div>
 <script>
-setInterval(function () {alert("Hello")}, 3000);
+while (true) {
+	sleep(3);
+	alert("kaka");
+}
 
 </script>
 	
