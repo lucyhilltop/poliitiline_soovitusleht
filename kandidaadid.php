@@ -30,6 +30,9 @@ include ("header.php");
     </div>
     <?php endforeach; ?>
 </div>
+<?php getcount();
+
+?>
 	
 	
 	
