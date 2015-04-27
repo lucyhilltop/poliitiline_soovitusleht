@@ -32,7 +32,7 @@ include ("header.php");
 </div>
 <script>
 	setInterval(function(){
-		alert("a");
+		alert(getcount());
 }, 5000);
 
 </script>
