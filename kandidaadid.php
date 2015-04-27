@@ -39,9 +39,9 @@ include ("header.php");
 			a=b;
 		}
 		else {
-			alert("MUUTUSI POLE");
+			alert(a+" "+b);
 		}
-}, 2000);
+}, 5000);
 
 </script>
 	
