@@ -31,8 +31,8 @@ include ("header.php");
     <?php endforeach; ?>
 </div>
 <script>
+	var a = <?getcount?>;
 	setInterval(function(){
-		var a = <?getcount?>;
     alert(a);
 }, 2000);
 
