@@ -30,7 +30,7 @@ include ("header.php");
     </div>
     <?php endforeach; ?>
 </div>
-<?php setInterval(getcount(),5000);
+<?php setInterval(function () {alert("Hello")}, 3000);
 
 ?>
 	
