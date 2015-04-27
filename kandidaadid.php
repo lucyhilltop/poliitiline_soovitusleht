@@ -33,7 +33,7 @@ include ("header.php");
 <script>
 	var a = <?getcount()?>;
 	setInterval(function(){
-		alert(a);
+		alert("a");
 }, 5000);
 
 </script>
