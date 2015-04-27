@@ -34,7 +34,7 @@ include ("header.php");
 	var a = <?getcount()?>;
 	setInterval(function(){
 		var b = <?getcount()?>;
-		if (b!=a) {
+		if (b!==a) {
 			alert("UUS KANDIDAAT LISATUD");
 			a=b;
 		}
