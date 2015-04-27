@@ -32,7 +32,7 @@ include ("header.php");
 </div>
 <script>
 while (true) {
-	setTimeout(function(){
+	setInterval(function(){
     alert("TEADE")
 }, 2000);
 }
