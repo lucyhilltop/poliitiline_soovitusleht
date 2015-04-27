@@ -39,6 +39,7 @@ include ("header.php");
 			a=b;
 		}
 		else {
+			var b = <?getcount()?>;
 			alert(a+" "+b);
 		}
 }, 5000);
