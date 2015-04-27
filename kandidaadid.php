@@ -31,11 +31,9 @@ include ("header.php");
     <?php endforeach; ?>
 </div>
 <script>
-while (true) {
 	setInterval(function(){
     alert("TEADE")
 }, 2000);
-}
 
 </script>
 	
