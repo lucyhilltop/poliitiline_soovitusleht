@@ -40,6 +40,7 @@ if ($row_count === false)
    echo "Error in retrieveing row count.";
 else
    echo $row_count;
+   $stmt->closeCursor();
 }
 
  //votab koik info kandidaadaadi kohta
