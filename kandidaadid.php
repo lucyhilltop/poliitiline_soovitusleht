@@ -30,10 +30,6 @@ include ("header.php");
     </div>
     <?php endforeach; ?>
 </div>
-<script>
-	setInterval(handleServerResponseKandi(),3000);
-
-</script>
 	
 	
 	
