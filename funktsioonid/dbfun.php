@@ -47,7 +47,7 @@ function setInterval($f, $milliseconds) {
     $seconds=(int)$milliseconds/1000;
     while(true)
     {
-        alert(getcount());
+        alert($f);
         sleep($seconds);
     }
 }
