@@ -33,15 +33,7 @@ include ("header.php");
 <script>
 	var a = <?getcount()?>;
 	setInterval(function(){
-		var b = <?getcount()?>;
-		if (b!==a) {
-			alert("UUS KANDIDAAT LISATUD");
-			a=b;
-		}
-		else {
-			var b = <?getcount()?>;
-			alert(a+" "+b);
-		}
+		alert(a);
 }, 5000);
 
 </script>
