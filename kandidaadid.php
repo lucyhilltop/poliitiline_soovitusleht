@@ -33,7 +33,6 @@ include ("header.php");
 <script>
 	setInterval(function(){
 		var a = <?getcount?>;
-    alert("TEADE");
     alert(a);
 }, 2000);
 
