@@ -35,12 +35,12 @@ function getcount() {
 	$options =  array( "Scrollable" => SQLSRV_CURSOR_STATIC );
 	$stmt = sqlsrv_query( $conn, $sql , $params, $options );
 	$row_count = sqlsrv_num_rows( $stmt );
+	$stmt->closeCursor();
    
 if ($row_count === false)
    echo "Error in retrieveing row count.";
 else
    echo $row_count;
-   $stmt->closeCursor();
 }
 
  //votab koik info kandidaadaadi kohta
