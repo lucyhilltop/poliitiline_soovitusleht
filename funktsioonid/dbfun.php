@@ -41,6 +41,7 @@ if( $rows_affected === false) {
 } else {
       echo $rows_affected." rows were updated.<br />";
 }
+}
 
  //votab koik info kandidaadaadi kohta
 function getOneKandi($id)
