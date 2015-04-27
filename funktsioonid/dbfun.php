@@ -29,18 +29,19 @@ function getAll($table)
 }
 //REFRESHI FUNKTSIOON
 function getcount() {
-	$conn = connect();
-	$sql = "SELECT * FROM Kandidaadid";
+ 	$conn = connect();
+ 	$sql = "SELECT * FROM Kandidaadid";
 	$stmt = sqlsrv_query( $conn, $sql);
-	$rows_affected = sqlsrv_rows_affected( $stmt);
-if( $rows_affected === false) {
-     die( print_r( sqlsrv_errors(), true));
-} elseif( $rows_affected == -1) {
-      echo "No information available.<br />";
-} else {
-      echo $rows_affected." rows were updated.<br />";
-}
-}
+	$params = array();
+	$options =  array( "Scrollable" => SQLSRV_CURSOR_KEYSET );
+	$stmt = sqlsrv_query( $conn, $sql , $params, $options );
+ 	$row_count = sqlsrv_num_rows( $stmt );
+    
+ if ($row_count === false)
+    echo "Error in retrieveing row count.";
+ else
+    echo $row_count;
+ }
 
  //votab koik info kandidaadaadi kohta
 function getOneKandi($id)
