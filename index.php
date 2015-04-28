@@ -70,6 +70,7 @@ setInterval(function () {
 
 }, 1000);
 </script>
+<span id="countdown">21 päeva, 2 tundi, 5 minutit, 14 sekundit</span>
  
      <h3>Erakondade populaarsus:</h3>
      <canvas id="pirukas" width="400" height="400"></canvas>
