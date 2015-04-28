@@ -70,7 +70,6 @@ setInterval(function () {
 
 }, 1000);
 </script>
-<span id="countdown">21 päeva, 2 tundi, 5 minutit, 14 sekundit</span>
  
      <h3>Erakondade populaarsus:</h3>
      <canvas id="pirukas" width="400" height="400"></canvas>
@@ -79,7 +78,6 @@ setInterval(function () {
  
  <div class="clear"></div>
  
- <script type="text/javascript" src="countdown.js"></script>
 <script src="js/facebook.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
