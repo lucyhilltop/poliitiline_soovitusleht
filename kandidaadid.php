@@ -86,21 +86,7 @@ include ("header.php");
     window.onhashchange();
 </script>
 
-<script>
- 	var a = <?getcount()?>;
- 	setInterval(function(){
- 		var b = <?getcount()?>;
-		if (b!==a) {
- 			alert("UUS KANDIDAAT LISATUD");
- 			a=b;
- 		}
- 		else {
- 			var b = <?getcount()?>;
- 			alert(a+" "+b);
- 		}
- }, 5000);
- 
- </script>
+
 
 <?php
 include ("footer.php");
