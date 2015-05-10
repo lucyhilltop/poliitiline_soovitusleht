@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+	<head>
 <?php
 
 include ("funktsioonid/dbfun.php");
@@ -14,8 +17,9 @@ $top=getTop();
 
 include("header.php");
 ?>
-<html manifest="cache.manifest">
-
+	</head>
+	
+	<body>
 <div id= "populaarsed">
 
     <h1> Populaarseimad kandidaadid:</h1>
@@ -44,6 +48,10 @@ include("header.php");
      <canvas id="pirukas" width="400" height="400"></canvas>
  
  </div>
+		
+		
+	</body>
+
  
  <div class="clear"></div>
  
@@ -53,3 +61,4 @@ include("header.php");
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 <script src="pirukas.js"></script>
 <?php include ("footer.php"); ?>
+</html>
