@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="offline.appcache">
+<html manifest="cache.manifest">
 <?php
 
 include ("funktsioonid/dbfun.php");
