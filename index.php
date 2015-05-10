@@ -14,6 +14,7 @@ $top=getTop();
 
 include("header.php");
 ?>
+<html manifest="cache.manifest">
 
 <div id= "populaarsed">
 
