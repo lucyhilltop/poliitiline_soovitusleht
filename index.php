@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html manifest="offline.appcache">
 <?php
 
 include ("funktsioonid/dbfun.php");
@@ -52,3 +54,4 @@ include("header.php");
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 <script src="pirukas.js"></script>
 <?php include ("footer.php"); ?>
+</html>
