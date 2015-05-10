@@ -1,4 +1,3 @@
-
 <?php
 
 include ("funktsioonid/dbfun.php");
@@ -44,7 +43,7 @@ include("header.php");
      <canvas id="pirukas" width="400" height="400"></canvas>
  
  </div>
-		
+ 
  <div class="clear"></div>
  
 <script src="countdown.js"></script>
@@ -53,4 +52,3 @@ include("header.php");
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 <script src="pirukas.js"></script>
 <?php include ("footer.php"); ?>
-		
