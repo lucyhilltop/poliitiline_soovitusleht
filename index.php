@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html manifest="cache.manifest">
-	<head>
+
 <?php
 
 include ("funktsioonid/dbfun.php");
@@ -17,9 +15,7 @@ $top=getTop();
 
 include("header.php");
 ?>
-	</head>
-	
-	<body>
+
 <div id= "populaarsed">
 
     <h1> Populaarseimad kandidaadid:</h1>
@@ -58,7 +54,3 @@ include("header.php");
 <script src="pirukas.js"></script>
 <?php include ("footer.php"); ?>
 		
-	</body>
-
- 
-</html>
