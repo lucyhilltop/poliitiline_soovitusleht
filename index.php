@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-/*<html manifest="cache.manifest">*/
 <?php
 
 include ("funktsioonid/dbfun.php");
